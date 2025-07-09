@@ -1,0 +1,37 @@
+@use './base/typo' as typo;
+@use './base/basic' as basic;
+@use './components/top-bar' as top-bar;
+@use './components/navbar' as navbar;
+@use './layouts/header-hero' as header-hero;
+
+
+// Special A
+@media screen and (max-width: 1400px) {
+  @include header-hero.header-hero--special-a(); // layouts/header-hero.scss
+}
+
+// Special B
+@media screen and (max-width: 1140px) {
+  @include navbar.navbar--special-b(); // components/navbar.scss
+}
+
+// Large (lg)
+@media screen and (max-width: 992px) {
+  @include basic.basic--lg(); // components/basic.scss
+  @include header-hero.header-hero--lg(); // layouts/header-hero.scss
+}
+
+// Medium (md)
+@media screen and (max-width: 768px) {
+  @include basic.basic--md(); // components/basic.scss
+  @include navbar.navbar--md(); // components/navbar.scss
+  @include header-hero.header-hero--md(); // layouts/header-hero.scss
+}
+
+// Small (sm)
+@media screen and (max-width: 576px) {
+  @include typo.typo--sm(); // base/typo.scss
+  @include basic.basic--sm(); // components/basic.scss
+  @include top-bar.top-bar--sm(); // components/top-bar.scss
+  @include header-hero.header-hero--sm(); // layouts/header-hero.scss
+}

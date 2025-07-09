@@ -1,0 +1,53 @@
+// Topbar
+.top-bar-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.top-bar-r {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+
+.social-icon-topbar-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  img {
+    width: 18px;
+    display: block;
+  }
+}
+
+// mobile - llamados en _mobile.scss
+@mixin top-bar--lg() {}
+
+@mixin top-bar--md() {}
+
+@mixin top-bar--sm() {
+  .top-bar-wrapper {
+    flex-flow: column nowrap;
+    gap: 15px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .social-icon-topbar-link {
+
+    img {
+      width: 20px;
+    }
+  }
+}

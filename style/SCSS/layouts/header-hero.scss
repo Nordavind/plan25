@@ -1,0 +1,251 @@
+// Header Hero
+.header-hero {
+  background-color: gray;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.45);
+    z-index: 4;
+  }
+
+  &::before {
+    left: 50px;
+  }
+
+  &::after {
+    right: 50px;
+  }
+
+  .line-bottom {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.45);
+    z-index: 4;
+  }
+}
+
+// Hero Slider
+%hero-slide-base {
+  position: relative;
+  background-color: #252525;
+  z-index: 1;
+}
+
+%hero-slide-before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('../img/gridtile.png');
+  background-repeat: repeat;
+  background-size: 2px 2px;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.hero-slide-1 {
+  @extend %hero-slide-base;
+  background-image: url('../img/bernstein-slide-a.webp');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    @extend %hero-slide-before;
+  }
+
+  >* {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.hero-slide-2 {
+  @extend %hero-slide-base;
+  background-image: url('../img/bernstein-slide-b.webp');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    @extend %hero-slide-before;
+  }
+
+  >* {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+// Hero Slider Content
+.slider-container {
+  max-width: 1280px;
+  height: 100%;
+  padding: 0 40px 0px 40px;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  // background-color: rgba(255, 255, 255, 0.281);
+}
+
+.slider-content-wrapper {
+  position: relative;
+  max-width: 685px;
+  margin-top: 200px;
+  margin-bottom: 150px;
+  padding: 45px;
+  border-radius: 0px 30px 30px 30px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0px 4px 12px rgba(80, 80, 80, 0.15);
+  // backdrop-filter: blur(2px);
+
+  > :nth-child(1) {
+    margin-bottom: 18px;
+  }
+
+  > :nth-child(2) {
+    margin-bottom: 18px;
+  }
+
+  > :nth-child(3) {
+    margin-bottom: 30px;
+  }
+}
+
+// Botones Slider Wrapper
+.btn-slide-wrapper {
+  position: absolute;
+  right: 45px;
+  bottom: 45px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0px;
+}
+
+// Botones Slider
+%btn-slider-reset {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%btn-slider-base {
+  @extend %btn-slider-reset;
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  img {
+    width: 8.6px;
+    height: 15px;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.btn-slide-next {
+  @extend %btn-slider-base;
+}
+
+.btn-slide-prev {
+  @extend %btn-slider-base;
+
+  width: 36px;
+  height: 35px;
+  border-right: none;
+
+  img {
+    transform: rotate(180deg);
+  }
+}
+
+
+
+
+// mobile - llamados en _mobile.scss
+@mixin header-hero--special-a() {
+  .header-hero {
+
+    &::before,
+    &::after {
+      content: none; // o ""
+      background: none;
+    }
+  }
+
+  .line-bottom {
+    display: none;
+  }
+
+  .slider-content-wrapper {
+    margin-top: 180px;
+    margin-bottom: 80px;
+  }
+
+}
+
+@mixin header-hero--lg() {
+  .slider-content-wrapper {
+    margin-top: 160px;
+    margin-bottom: 60px;
+    padding: 40px;
+  }
+}
+
+@mixin header-hero--md() {
+  .slider-container {
+    padding: 0 30px 0px 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-content-wrapper {
+    max-width: 100%;
+    margin-top: 140px;
+    margin-bottom: 60px;
+    padding: 40px 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn-slide-wrapper {
+    position: static;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0px;
+    margin-top: 40px;
+  }
+}
+
+@mixin header-hero--sm() {
+  .slider-container {
+    padding: 0 25px 0px 25px;
+  }
+
+  .slider-content-wrapper {
+    padding: 40px 20px;
+  }
+}
