@@ -1,0 +1,25 @@
+.post-header-bar {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// mobile - llamados en _mobile.scss
+@mixin post-header--lg() {
+  .post-header-bar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+@mixin post-header--md() {}
+
+@mixin post-header--sm() {}

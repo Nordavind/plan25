@@ -2,6 +2,7 @@
 @use './base/basic' as basic;
 @use './components/top-bar' as top-bar;
 @use './components/navbar' as navbar;
+@use './components/post-header' as post-header;
 @use './layouts/header-hero' as header-hero;
 
 
@@ -18,6 +19,7 @@
 // Large (lg)
 @media screen and (max-width: 992px) {
   @include basic.basic--lg(); // components/basic.scss
+  @include post-header.post-header--lg(); // components/post-header.scss
   @include header-hero.header-hero--lg(); // layouts/header-hero.scss
 }
 
