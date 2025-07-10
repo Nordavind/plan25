@@ -1,0 +1,73 @@
+@use '../utilities/variables' as vars;
+
+.hl-title {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+}
+
+.hl-grid-item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+
+  h4 {
+    margin-bottom: 15px;
+  }
+}
+
+.hl-ico {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid vars.$line-color;
+  border-radius: 20px 0px 20px 0px;
+  margin-bottom: 25px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+// mobile - llamados en _mobile.scss
+@mixin highlights--lg() {
+  .hl-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hl-grid-item {
+    align-items: center;
+
+    h4,
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@mixin highlights--sm() {
+  .hl-grid-item {
+    flex-flow: row nowrap;
+    gap: 25px;
+    align-items: flex-start;
+
+    h4,
+    p {
+      text-align: left;
+    }
+  }
+}

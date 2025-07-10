@@ -4,6 +4,7 @@
 @use './components/navbar' as navbar;
 @use './components/post-header' as post-header;
 @use './layouts/header-hero' as header-hero;
+@use './layouts/highlights' as highlights;
 
 
 // Special A
@@ -13,6 +14,7 @@
 
 // Special B
 @media screen and (max-width: 1140px) {
+  @include typo.typo--special-b(); // base/typo.scss
   @include navbar.navbar--special-b(); // components/navbar.scss
 }
 
@@ -21,6 +23,7 @@
   @include basic.basic--lg(); // components/basic.scss
   @include post-header.post-header--lg(); // components/post-header.scss
   @include header-hero.header-hero--lg(); // layouts/header-hero.scss
+  @include highlights.highlights--lg(); // layouts/highlights.scss
 }
 
 // Medium (md)
@@ -36,4 +39,5 @@
   @include basic.basic--sm(); // components/basic.scss
   @include top-bar.top-bar--sm(); // components/top-bar.scss
   @include header-hero.header-hero--sm(); // layouts/header-hero.scss
+  @include highlights.highlights--sm(); // layouts/highlights.scss
 }

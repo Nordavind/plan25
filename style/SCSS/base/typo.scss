@@ -25,9 +25,10 @@ h2 {
   font-size: 1.75rem;
   line-height: 2.5rem;
   font-weight: 200;
-  color: vars.$font-color-a;
+  color: vars.$dark-gray;
 
   &.h2-center {
+    max-width: 75%;
     text-align: center;
   }
 }
@@ -49,11 +50,19 @@ h3 {
   }
 }
 
-.h3-wrapper {
+.h3-wrapper-a {
   display: inline-block;
   padding: 6px 28px;
   border-radius: 30px;
   background-color: vars.$color-a;
+}
+
+.h3-wrapper-b {
+  display: inline-block;
+  padding: 6px 60px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid vars.$color-a;
 }
 
 h4 {
@@ -104,14 +113,31 @@ p {
 }
 
 // mobile - llamados en _mobile.scss
+
+@mixin typo--special-b() {
+
+  h2 {
+    &.h2-center {
+      max-width: 90%;
+    }
+  }
+}
+
 @mixin typo--sm() {
+  h2 {
+    &.h2-center {
+      max-width: 100%;
+    }
+  }
 
   h3 {
     font-size: .875rem;
     line-height: 1.25rem;
   }
 
-  .h3-wrapper {
+  .h3-wrapper-a,
+  .h3-wrapper-b {
     padding: 8px 28px;
+    text-align: center;
   }
 }

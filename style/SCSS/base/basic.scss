@@ -12,8 +12,33 @@
   margin: auto;
 }
 
+// Utils
+.mt {
+  margin-top: 100PX;
+}
+
+.mb {
+  margin-bottom: 100px;
+}
+
+.int-mb {
+  margin-bottom: 60px;
+}
+
 // mobile - llamados en _mobile.scss
-@mixin basic--lg() {}
+@mixin basic--lg() {
+  .mt {
+    margin-top: 80PX;
+  }
+
+  .mb {
+    margin-bottom: 80px;
+  }
+
+  .int-mb {
+    margin-bottom: 60px;
+  }
+}
 
 @mixin basic--md() {
   .container {
@@ -26,5 +51,17 @@
   .container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .mt {
+    margin-top: 75PX;
+  }
+
+  .mb {
+    margin-bottom: 75px;
+  }
+
+  .int-mb {
+    margin-bottom: 60px;
   }
 }
