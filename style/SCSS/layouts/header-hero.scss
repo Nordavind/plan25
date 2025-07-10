@@ -1,10 +1,12 @@
+@use '../utilities/variables' as vars;
+
 // Header Hero
 .swiper {
   transition: height 0.3s ease-in-out;
 }
 
 .header-hero {
-  background-color: gray;
+  background-color: vars.$dark-gray;
   position: relative;
 
   &::before,
@@ -175,16 +177,12 @@
   @extend %btn-slider-base;
 
   width: 36px;
-  height: 35px;
   border-right: none;
 
   img {
     transform: rotate(180deg);
   }
 }
-
-
-
 
 // mobile - llamados en _mobile.scss
 @mixin header-hero--special-a() {

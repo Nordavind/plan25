@@ -40,29 +40,45 @@ h3 {
   letter-spacing: 0.6px;
   font-weight: 300;
   text-transform: uppercase;
+  text-align: center;
 
   &.h3-color {
     color: vars.$color-a;
   }
 
-  &.h3-white {
+  &.h3-white-a {
+    color: white;
+  }
+
+  &.h3-white-b {
+    font-weight: 200;
     color: white;
   }
 }
 
-.h3-wrapper-a {
+%h3-wrapper-base {
   display: inline-block;
-  padding: 6px 28px;
   border-radius: 30px;
+}
+
+.h3-wrapper-a {
+  @extend %h3-wrapper-base;
+  padding: 6px 28px;
   background-color: vars.$color-a;
 }
 
 .h3-wrapper-b {
-  display: inline-block;
+  @extend %h3-wrapper-base;
   padding: 6px 60px;
-  border-radius: 30px;
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid vars.$color-a;
+}
+
+.h3-wrapper-c {
+  @extend %h3-wrapper-base;
+  padding: 6px 60px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
 }
 
 h4 {
@@ -110,10 +126,17 @@ p {
     line-height: 1.5625rem;
     font-weight: 300;
   }
+
+  &.p-cta {
+    color: white;
+    font-size: 1.5625rem;
+    line-height: 2.1875rem;
+    font-weight: 100;
+    text-align: center;
+  }
 }
 
 // mobile - llamados en _mobile.scss
-
 @mixin typo--special-b() {
 
   h2 {
@@ -138,6 +161,5 @@ p {
   .h3-wrapper-a,
   .h3-wrapper-b {
     padding: 8px 28px;
-    text-align: center;
   }
 }

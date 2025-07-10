@@ -4,4 +4,30 @@
   display: none;
 }
 
+.temporal {
+  height: 150px;
+}
 
+.cta-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.cta-wrapper {
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border: 1px solid white;
+  padding: 80px 60px;
+  border-radius: 100px 0 100px 0;
+
+  > :nth-child(1) {
+    margin-bottom: 30px;
+  }
+
+  > :nth-child(2) {
+    margin-bottom: 35px;
+  }
+}
