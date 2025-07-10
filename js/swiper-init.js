@@ -3,7 +3,7 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-
+  autoHeight: true,
   // autoplay: {
   //     delay: 4000,
   //     disableOnInteraction: false,
