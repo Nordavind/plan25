@@ -100,7 +100,6 @@
 }
 
 @mixin about-us--md() {
-
   .about-content {
     align-items: center;
     text-align: center;
@@ -108,6 +107,11 @@
 }
 
 @mixin about-us--sm() {
+  .about-us {
+    gap: 75px;
+  }
+
+
   .about-hl-grid {
     grid-template-columns: 1fr;
     gap: 30px;
