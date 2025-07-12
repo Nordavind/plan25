@@ -26,10 +26,12 @@ h2 {
   line-height: 2.1875rem;
   font-weight: 200;
   color: vars.$dark-gray;
+  margin-bottom: 20px;
 
   &.h2-center {
     max-width: 75%;
     text-align: center;
+    margin-bottom: 0px;
   }
 }
 
@@ -81,6 +83,14 @@ h3 {
   border: 1px solid white;
 }
 
+.h3-wrapper-d {
+  @extend %h3-wrapper-base;
+  padding: 6px 28px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid vars.$color-a;
+  margin-bottom: 15px;
+}
+
 h4 {
   font-family: $font-a;
   font-size: 1.375rem;
@@ -100,6 +110,7 @@ p {
   line-height: 1.6875rem;
   font-weight: 300;
   color: vars.$font-color-a;
+  margin-bottom: 15px;
 
   &.p-top-bar {
     color: vars.$font-color-b;
@@ -107,6 +118,7 @@ p {
     font-size: .875rem;
     line-height: .875rem;
     font-weight: 400;
+    margin-bottom: 0px;
   }
 
   &.p-white {
@@ -115,6 +127,7 @@ p {
     font-size: 1.0rem;
     line-height: 1.625rem;
     font-weight: 300;
+    margin-bottom: 0px;
     text-shadow: 2px 2px 3px rgba(25, 25, 25, 0.15);
     // text-shadow: 0 0 1px rgba(51,51,51,0.5);
   }
@@ -125,24 +138,40 @@ p {
     font-size: 1.125rem;
     line-height: 1.5625rem;
     font-weight: 300;
+    margin-bottom: 0px;
   }
 
   &.p-cta {
     color: white;
     font-size: 1.5625rem;
-    line-height: 2.1875rem;
+    line-height: 2.375rem;
     font-weight: 100;
     text-align: center;
+    margin-bottom: 0px;
   }
 }
 
-// mobile - llamados en _mobile.scss
+// mobile - llamados en mobile.scss
 @mixin typo--special-b() {
 
   h2 {
     &.h2-center {
       max-width: 90%;
     }
+  }
+}
+
+@mixin typo--md() {
+  h2 {
+  margin-bottom: 30px;
+
+  &.h2-center {
+    margin-bottom: 0px;
+  }
+}
+
+  .h3-wrapper-d {
+    margin-bottom: 20px;
   }
 }
 
@@ -159,7 +188,8 @@ p {
   }
 
   .h3-wrapper-a,
-  .h3-wrapper-b {
+  .h3-wrapper-b,
+  .h3-wrapper-c {
     padding: 8px 28px;
   }
 }

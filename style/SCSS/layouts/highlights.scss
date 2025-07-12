@@ -42,7 +42,11 @@
   }
 }
 
-// mobile - llamados en _mobile.scss
+.hl-text p {
+  margin-bottom: 0px;
+}
+
+// mobile - llamados en mobile.scss
 @mixin highlights--lg() {
   .hl-grid {
     grid-template-columns: 1fr;

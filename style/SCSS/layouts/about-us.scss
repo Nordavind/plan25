@@ -1,0 +1,124 @@
+@use '../utilities/variables' as vars;
+@use '../base/typo' as typo;
+
+.about-us {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-hl-grid {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.about-hl-item {
+  position: relative;
+  border: 1px dashed vars.$line-color;
+  border-radius: 30px 0px 30px 0px;
+  height: 270px;
+  padding: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: end;
+  align-items: flex-start;
+}
+
+.about-hl-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid vars.$line-color;
+  border-radius: 20px 0px 20px 0px;
+}
+
+.p-about-hl-num {
+  font-family: typo.$font-a;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  color: vars.$font-color-a;
+  margin-bottom: 10px;
+}
+
+.p-about-hl-text {
+  font-family: typo.$font-b;
+  font-size: 1.0625rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: vars.$color-a;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.about-content {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// mobile - llamados en mobile.scss
+@mixin about-us--lg() {
+  .about-us {
+    flex-flow: column nowrap;
+    gap: 80px;
+    align-items: flex-start;
+  }
+
+  .about-hl-grid {
+    width: 100%;
+  }
+
+  .about-hl-item {
+    height: auto;
+    padding: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: end;
+    align-items: flex-start;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+}
+
+@mixin about-us--md() {
+
+  .about-content {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@mixin about-us--sm() {
+  .about-hl-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-hl-item {
+    padding: 25px;
+  }
+
+  .about-hl-icon {
+    top: 25px;
+    right: 25px;
+  }
+}

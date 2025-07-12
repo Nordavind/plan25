@@ -29,7 +29,7 @@
   margin-bottom: 60px;
 }
 
-// mobile - llamados en _mobile.scss
+// mobile - llamados en mobile.scss
 @mixin basic--lg() {
   .mt {
     margin-top: 80PX;
@@ -58,7 +58,7 @@
   }
 
   .mt {
-    margin-top: 75PX;
+    margin-top: 75px;
   }
 
   .mb {
@@ -66,6 +66,6 @@
   }
 
   .int-mb {
-    margin-bottom: 60px;
+    margin-bottom: 75px;
   }
 }

@@ -5,6 +5,8 @@
 @use './components/post-header' as post-header;
 @use './layouts/header-hero' as header-hero;
 @use './layouts/highlights' as highlights;
+@use './layouts/cta' as cta;
+@use './layouts/about-us' as about-us;
 
 
 // Special A
@@ -24,13 +26,17 @@
   @include post-header.post-header--lg(); // components/post-header.scss
   @include header-hero.header-hero--lg(); // layouts/header-hero.scss
   @include highlights.highlights--lg(); // layouts/highlights.scss
+  @include cta.cta--lg(); // layouts/cta.scss
+  @include about-us.about-us--lg(); // layouts/about-us.scss
 }
 
 // Medium (md)
 @media screen and (max-width: 768px) {
+  @include typo.typo--md(); // base/typo.scss
   @include basic.basic--md(); // components/basic.scss
   @include navbar.navbar--md(); // components/navbar.scss
   @include header-hero.header-hero--md(); // layouts/header-hero.scss
+  @include about-us.about-us--md(); // layouts/about-us.scss
 }
 
 // Small (sm)
@@ -40,4 +46,6 @@
   @include top-bar.top-bar--sm(); // components/top-bar.scss
   @include header-hero.header-hero--sm(); // layouts/header-hero.scss
   @include highlights.highlights--sm(); // layouts/highlights.scss
+  @include cta.cta--sm(); // layouts/cta.scss
+  @include about-us.about-us--sm(); // layouts/about-us.scss
 }
