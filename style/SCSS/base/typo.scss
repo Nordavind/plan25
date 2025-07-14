@@ -103,6 +103,14 @@ h4 {
   color: vars.$dark-gray;
 }
 
+h5 {
+  font-family: $font-a;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  color: vars.$font-color-b;
+}
+
 // textos
 strong {
   font-weight: 600;
@@ -160,6 +168,41 @@ p {
 
   &.p-nm {
     margin-bottom: 0px;
+  }
+
+  &.p-dark {
+    color: vars.$font-color-b;
+    margin-bottom: 0px;
+  }
+}
+
+%reset-a {
+  all: unset;
+  display: inline;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  @extend %reset-a;
+  font-family: $font-a;
+  font-size: .9375rem;
+  line-height: 1.6875rem;
+  font-weight: 300;
+  color: vars.$font-color-a;
+  transition: color 0.3s ease-in-out;
+
+  &.a-dark {
+    color: vars.$font-color-b;
+  }
+
+  &.a-underline {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: vars.$color-a;
   }
 }
 

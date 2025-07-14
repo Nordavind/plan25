@@ -8,6 +8,7 @@
 @use './layouts/cta' as cta;
 @use './layouts/about-us' as about-us;
 @use './layouts/contact' as contact;
+@use './layouts/footer' as footer;
 
 
 // Special A
@@ -30,6 +31,7 @@
   @include cta.cta--lg(); // layouts/cta.scss
   @include about-us.about-us--lg(); // layouts/about-us.scss
   @include contact.contact--lg(); // layouts/contact.scss
+  @include footer.footer--lg(); // layouts/footer.scss
 }
 
 // Medium (md)
@@ -51,5 +53,6 @@
   @include highlights.highlights--sm(); // layouts/highlights.scss
   @include cta.cta--sm(); // layouts/cta.scss
   @include about-us.about-us--sm(); // layouts/about-us.scss
-    @include contact.contact--sm(); // layouts/contact.scss
+  @include contact.contact--sm(); // layouts/contact.scss
+    @include footer.footer--sm(); // layouts/footer.scss
 }
