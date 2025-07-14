@@ -1,0 +1,225 @@
+@use '../utilities/variables' as vars;
+@use '../base/typo' as typo;
+
+%pattern-bg-before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('../img/gridtile.png');
+  background-repeat: repeat;
+  background-size: 2px 2px;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.contact-main {
+  position: relative;
+  z-index: 1;
+  background-color: vars.$dark-gray;
+  background-image: url('../img/cf-bg-1.webp');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    @extend %pattern-bg-before;
+  }
+}
+
+.diagonal-img {
+  position: absolute;
+  z-index: 3;
+  bottom: 0px;
+  width: 100%;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 4;
+  padding-top: 100px;
+}
+
+.contact-wrapper {
+  background-color: white;
+  max-width: 790px;
+  margin-left: auto;
+  margin-right: 0px;
+  border-radius: 30px;
+  padding: 40px;
+}
+
+// Formulario
+#formMain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#formMain * {
+  font-family: typo.$font-a;
+  color: vars.$font-color-a;
+  font-size: .9375rem;
+  line-height: .9375rem;
+  font-weight: 300;
+}
+
+#formMain input::placeholder,
+#formMain textarea::placeholder {
+  color: vars.$font-color-a;
+}
+
+#formMain input:focus,
+#formMain textarea:focus {
+  border-color: vars.$color-a;
+  outline: none;
+}
+
+#formName,
+#formEmail,
+#formTelephone,
+#formMessage {
+  padding-left: 15px;
+  border: 1px solid vars.$line-color;
+  border-radius: 10px;
+  transition: border-color 0.25s ease-in-out;
+}
+
+#formName,
+#formEmail {
+  flex: 1 0 140px;
+  height: 45px;
+}
+
+#formTelephone {
+  width: 100%;
+  height: 45px;
+}
+
+#formMessage {
+  width: 100%;
+  height: 180px;
+  padding: 15px;
+  resize: none;
+  line-height: 1.6875rem;
+}
+
+%button-reset {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+#formSubmit {
+  @extend %button-reset;
+  padding: 15px 35px;
+  border-radius: 100px;
+  box-sizing: border-box;
+  font-family: typo.$font-b;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.45px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: vars.$color-a;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: vars.$color-b;
+  }
+}
+
+.checkbox-wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkbox-subwrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkbox-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid vars.$font-color-b;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s, border-color 0.2s;
+
+    &:checked {
+      background-color: vars.$color-a;
+      border-color: vars.$color-a;
+    }
+
+    &:checked::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      width: 5px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  label {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+// mobile - llamados en mobile.scss
+@mixin contact--lg() {
+  .contact-container {
+    padding-top: 80px;
+  }
+
+  .contact-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin contact--md() {
+  .checkbox-wrapper {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+}
+
+@mixin contact--sm() {
+  .contact-container {
+    padding-top: 75px;
+  }
+
+  .contact-wrapper {
+    padding: 35px 30px;
+  }
+
+  .checkbox-subwrapper {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+}

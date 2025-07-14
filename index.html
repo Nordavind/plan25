@@ -156,7 +156,10 @@
       </div>
     </div>
   </section>
-  <section class="light-bg temporal">
+  <section class="light-bg">
+    <div class="container cta-container">
+      <p>Aca va el componente JS de showcase de los 3 ultimos proyectos</p>
+    </div>
   </section>
 
   <section class="cta-video dark-bg">
@@ -228,6 +231,59 @@
       </div>
 
     </div>
+  </section>
+  <section>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.8443305989454!2d-70.523049!3d-33.45336199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cde3c9e23aeb%3A0x1ced2d78b2a5fc27!2sPLAN%20Inmobiliaria!5e0!3m2!1ses!2scl!4v1752448432664!5m2!1ses!2scl"
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section class="contact-main">
+
+    <div class="container contact-container">
+      <div class="contact-wrapper">
+        <h2 class="h2-form">Formulario de Contacto</h2>
+        <p class="p-form">¿Tienes dudas? Completa el formulario y te contactaremos a la brevedad. También puedes
+          escribirnos por
+          nuestros otros medios de contacto.</p>
+        <form id="formMain" action="" method="POST">
+          <input type="hidden" name="access_key" value="">
+          <input type="hidden" name="subject" value="Lead formulario">
+          <input type="hidden" name="from_name" value="PLAN Web">
+          <input type="hidden" name="redirect" value="https://www.planinmobiliaria.cl/exito.html">
+
+          <input type="text" id="formName" name="nombre" placeholder="Nombre*" required>
+          <input type="email" id="formEmail" name="email" placeholder="Correo Electrónico*" required>
+          <input type="tel" id="formTelephone" name="telefono" placeholder="Teléfono">
+          <textarea id="formMessage" name="mensaje" placeholder="Escriba su mensaje*" required></textarea>
+
+          <div class="checkbox-wrapper">
+            <p class="p-nm">Deseo ser contactado vía:</p>
+            <div class="checkbox-subwrapper">
+              <div class="checkbox-item">
+                <input type="checkbox" value="telefono" name="contacto-via[]" id="formCheck1">
+                <label for="formCheck1">Teléfono</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" value="whatsapp" name="contacto-via[]" id="formCheck2">
+                <label for="formCheck2">Whatsapp</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" value="email" name="contacto-via[]" id="formCheck3">
+                <label for="formCheck3">Email</label>
+              </div>
+            </div>
+          </div>
+
+          <input type="submit" id="formSubmit" value="Enviar Mensaje">
+        </form>
+
+
+      </div>
+    </div>
+    <img class="diagonal-img" src="img/diagonal-img.svg" alt="imagen ornamental de fondo">
+
   </section>
 
 </body>

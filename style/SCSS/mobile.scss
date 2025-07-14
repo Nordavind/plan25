@@ -7,6 +7,7 @@
 @use './layouts/highlights' as highlights;
 @use './layouts/cta' as cta;
 @use './layouts/about-us' as about-us;
+@use './layouts/contact' as contact;
 
 
 // Special A
@@ -28,6 +29,7 @@
   @include highlights.highlights--lg(); // layouts/highlights.scss
   @include cta.cta--lg(); // layouts/cta.scss
   @include about-us.about-us--lg(); // layouts/about-us.scss
+  @include contact.contact--lg(); // layouts/contact.scss
 }
 
 // Medium (md)
@@ -37,6 +39,7 @@
   @include navbar.navbar--md(); // components/navbar.scss
   @include header-hero.header-hero--md(); // layouts/header-hero.scss
   @include about-us.about-us--md(); // layouts/about-us.scss
+  @include contact.contact--md(); // layouts/contact.scss
 }
 
 // Small (sm)
@@ -48,4 +51,5 @@
   @include highlights.highlights--sm(); // layouts/highlights.scss
   @include cta.cta--sm(); // layouts/cta.scss
   @include about-us.about-us--sm(); // layouts/about-us.scss
+    @include contact.contact--sm(); // layouts/contact.scss
 }
