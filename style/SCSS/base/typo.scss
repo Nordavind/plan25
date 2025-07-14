@@ -204,4 +204,28 @@ p {
   .h3-wrapper-c {
     padding: 8px 28px;
   }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+
+    &.p-top-bar {
+      font-size: .875rem;
+      line-height: .875rem;
+    }
+
+    &.p-white {
+      line-height: 1.625rem;
+    }
+
+    &.p-post-header-bar {
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+    }
+
+    &.p-cta {
+      font-size: 1.5625rem;
+      line-height: 2.375rem;
+    }
+  }
 }
