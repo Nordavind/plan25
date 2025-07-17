@@ -42,6 +42,7 @@
   @include navbar.navbar--md(); // components/navbar.scss
   @include projects-slider.projects-slider--md(); // components/projects-slider.scss
   @include header-hero.header-hero--md(); // layouts/header-hero.scss
+  @include cta.cta--md(); // layouts/cta.scss
   @include about-us.about-us--md(); // layouts/about-us.scss
   @include contact.contact--md(); // layouts/contact.scss
 }

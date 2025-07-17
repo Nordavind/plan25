@@ -12,6 +12,7 @@
   <link rel="icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="canonical" href="https://www.planinmobiliaria.cl/" />
+  
   <!-- open-graph -->
   <meta property="og:title" content="Inicio | PLAN Inmobiliaria">
   <meta property="og:description"
@@ -21,22 +22,34 @@
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://www.planinmobiliaria.cl/">
   <meta property="og:type" content="website">
-  <!-- preload Google Fonts -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sora:wght@100..800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- preconnect + preload Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sora:wght@100..800&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet">
   </noscript>
+
   <!-- swiper-cdn -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <!-- gsap-cdn -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
   <!-- aos-cdn -->
+
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./style/style.css">
-  <!-- script -->
+
+  <!-- scripts -->
   <script defer src="./js/swiper-init.js"></script>
   <script defer src="./js/gsap-init.js"></script>
+  <script defer src="./js/video-cta-init.js"></script>
 </head>
 
 <body>
@@ -238,14 +251,19 @@
     </div>
   </section>
   <section class="cta-video dark-bg">
-    <video autoplay muted loop playsinline>
+
+    <video class="video-desktop" autoplay muted loop playsinline>
       <source src="./img/video-cta.mp4" type="video/mp4">
-      Tu navegador no soporta videos HTML5.
     </video>
+
+    <video class="video-mobile" autoplay muted loop playsinline>
+      <source src="./img/video-cta-mobile.mp4" type="video/mp4">
+    </video>
+
     <div class="container cta-container">
       <div class="cta-wrapper">
         <div class="h3-wrapper-c">
-          <h3 class="h3-white-b">Phasellus fermentum eleifend diam</h3>
+          <h3 class="h3-white-b">Condominio Reina Bernstein</h3>
         </div>
         <p class="p-cta">Con solo <strong>8 exclusivas casas</strong> emplazadas en terrenos de hasta 650m² y vistas
           panorámicas hacia la

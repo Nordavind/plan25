@@ -21,8 +21,8 @@
   z-index: 2;
 }
 
-.cta-video video {
-  // display: none;
+.cta-video .video-desktop,
+.cta-video .video-mobile {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,6 +33,14 @@
   z-index: 1;
   transform: translate(-50%, -50%);
   object-fit: cover;
+}
+
+.video-desktop {
+  display: block;
+}
+
+.video-mobile {
+  display: none;
 }
 
 .cta-video::after {
@@ -80,8 +88,18 @@
   }
 }
 
+@mixin cta--md() {
+  .video-desktop {
+    display: none;
+  }
+
+  .video-mobile {
+    display: block;
+  }
+}
+
 @mixin cta--sm() {
-    .cta-wrapper {
+  .cta-wrapper {
     padding: 75px 30px;
     border-radius: 60px 0 60px 0;
   }
