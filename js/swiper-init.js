@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const headerSwiper = new Swiper('.swiper-header-hero', {
     direction: 'horizontal',
     loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
     autoHeight: true,
     nested: true,
     lazy: {
@@ -29,6 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectsSlider = new Swiper('.swiper-projects-slider', {
     direction: 'horizontal',
     loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: true,
+    },
     autoHeight: true,
     spaceBetween: 60,
     lazy: {
