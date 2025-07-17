@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     direction: 'horizontal',
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 4000,
       disableOnInteraction: true,
     },
     autoHeight: true,
