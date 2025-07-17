@@ -12,7 +12,7 @@
   <link rel="icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="canonical" href="https://www.planinmobiliaria.cl/" />
-  
+
   <!-- open-graph -->
   <meta property="og:title" content="Inicio | PLAN Inmobiliaria">
   <meta property="og:description"
@@ -47,6 +47,7 @@
   <link rel="stylesheet" href="./style/style.css">
 
   <!-- scripts -->
+  <script defer src="./js/navbar.js"></script> 
   <script defer src="./js/swiper-init.js"></script>
   <script defer src="./js/gsap-init.js"></script>
   <script defer src="./js/video-cta-init.js"></script>
@@ -75,15 +76,28 @@
       <img class="logo-header" src="img/logo-plan.svg" alt="logo plan inmobiliaria">
       <ul class="nav-list-header">
         <li><a class="activo" href="#">Inicio</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Proyectos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#">Reina Bernstein</a></li>
         <li><a href="#">Reina Vildosola</a></li>
-        <li><button class="button-a">Contáctanos</button></li>
+        <li><button class="button-a" onclick="window.location.href='#contacto'">Contáctanos</button></li>
       </ul>
+      <button id="navLink" class="nav-deploy-link">
+        <img class="nav-ico" src="img/nav-ico.svg" alt="icono navegacion movil">
+      </button>
+      <div id="navDeploy" class="nav-deploy">
+        <ul class="nav-list-mobile">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#">Reina Bernstein</a></li>
+          <li><a href="#">Reina Vildósola</a></li>
+          <li><button class="button-a" onclick="window.location.href='#contacto'">Contáctanos</button></li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <section class="swiper swiper-header-hero">
+  <header class="swiper swiper-header-hero">
     <div class="swiper-wrapper">
       <div class="swiper-slide hero-slide-1">
         <div class="slider-container">
@@ -94,7 +108,7 @@
             <h1>Reina Bernstein, <strong>una casa que se adapta</strong> a tí.</h1>
             <p class="p-white">8 casas únicas de estilo contemporáneo de hasta 371m² totales, ubicadas en la tradicional
               calle Julia Bernstein.</p>
-            <button class="button-a">Ver Proyecto</button>
+            <a href="#" class="button-a">Ver Proyecto</a>
             <div class="btn-slide-wrapper">
               <button class="btn-slide-prev">
                 <img src="./img/slider-btn-ico.svg" alt="Anterior">
@@ -115,7 +129,7 @@
             <h1>Reina Vildosola, <strong>elegancia urbana</strong>.</h1>
             <p class="p-white">Proyecto residencial de 6 casas exclusivas, diseñadas con una moderna arquitectura y una
               ubicación privilegiada.</p>
-            <button class="button-a">Ver Proyecto</button>
+            <a href="#" class="button-a">Ver Proyecto</a>
             <div class="btn-slide-wrapper">
               <button class="btn-slide-prev">
                 <img src="./img/slider-btn-ico.svg" alt="Anterior">
@@ -129,12 +143,12 @@
       </div>
     </div>
     <div class="line-bottom"></div>
-  </section>
+  </header>
   <section class="dark-bg">
     <div class="container post-header-bar">
       <p class="p-post-header-bar">Descubre nuestros <strong>proyectos más recientes</strong> y encuentra tu próximo
         hogar.</p>
-      <button class="button-ghost-b">Ver Proyectos</button>
+      <a class="button-ghost-b" href="#proyectos">Ver Proyectos</a>
     </div>
   </section>
   <section class="container mt mb">
@@ -178,7 +192,7 @@
       </div>
     </div>
   </section>
-  <section class="light-bg">
+  <section id="proyectos" class="light-bg">
     <div class="container pt pb">
       <div class="swiper swiper-projects-slider">
         <div class="projects-slider-pagination"></div>
@@ -196,7 +210,7 @@
                 <p class="p-nm">Cada unidad cuenta con 6 estacionamientos, espacio para toda tu familia y amigos. Una
                   amplia calle conecta las 8 casas del condominio.</p>
               </div>
-              <button class="button-a">Ver Proyecto</button>
+              <a href="#" class="button-a">Ver Proyecto</a>
             </div>
             <div class="projects-slider-img slide-bernstein-img">
               <div class="projects-slider-img-label">
@@ -217,7 +231,7 @@
                 <p class="p-nm">Cada unidad cuenta con 6 estacionamientos, espacio para toda tu familia y amigos. Una
                   amplia calle conecta las 8 casas del condominio.</p>
               </div>
-              <button class="button-a">Ver Proyecto</button>
+              <a href="#" class="button-a">Ver Proyecto</a>
             </div>
             <div class="projects-slider-img slide-vildosola-img">
               <div class="projects-slider-img-label">
@@ -238,7 +252,7 @@
                 <p class="p-nm">Cada unidad cuenta con 6 estacionamientos, espacio para toda tu familia y amigos. Una
                   amplia calle conecta las 8 casas del condominio.</p>
               </div>
-              <button class="button-a">Ver Proyecto</button>
+              <a href="#" class="button-a">Ver Proyecto</a>
             </div>
             <div class="projects-slider-img slide-castillo-img">
               <div class="projects-slider-img-label">
@@ -251,15 +265,12 @@
     </div>
   </section>
   <section class="cta-video dark-bg">
-
     <video class="video-desktop" autoplay muted loop playsinline>
       <source src="./img/video-cta.mp4" type="video/mp4">
     </video>
-
     <video class="video-mobile" autoplay muted loop playsinline>
       <source src="./img/video-cta-mobile.mp4" type="video/mp4">
     </video>
-
     <div class="container cta-container">
       <div class="cta-wrapper">
         <div class="h3-wrapper-c">
@@ -269,7 +280,7 @@
           panorámicas hacia la
           cordillera, este proyecto logra una armonía entre <strong>naturaleza</strong>, <strong>cercanía
             urbana</strong> y <strong>confort interior</strong>.</p>
-        <button class="button-ghost-a">Ver Proyecto</button>
+        <a href="#" class="button-ghost-a">Ver Proyecto</a>
       </div>
     </div>
   </section>
@@ -329,7 +340,7 @@
       width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
-  <section class="contact-main">
+  <section id="contacto" class="contact-main">
     <div class="container contact-container">
       <div class="contact-wrapper">
         <h2 class="h2-form">Formulario de Contacto</h2>
@@ -371,7 +382,7 @@
     </div>
     <img class="diagonal-img" src="img/diagonal-img.svg" alt="imagen ornamental de fondo">
   </section>
-  <section class="dark-bg footer-bb">
+  <footer class="dark-bg footer-bb">
     <div class="container footer-container">
       <div class="footer-col-a">
         <img class="logo-footer" src="img/logo-plan-footer.svg" alt="logo plan">
@@ -441,5 +452,5 @@
         establecido en la Ley Nº19.472. Se recomienda revisar el proyecto final y sus especificaciones técnicas antes de
         concretar la compra.</p>
     </div>
-  </section>
+  </footer>
 </body>

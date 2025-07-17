@@ -32,6 +32,7 @@
   background-color: vars.$color-a;
 
   &:hover {
+    color: #fff;
     background-color: vars.$color-b;
   }
 }
@@ -43,6 +44,7 @@
   background-color: vars.$color-b;
 
   &:hover {
+    color: #fff;
     background-color: vars.$color-a;
   }
 }

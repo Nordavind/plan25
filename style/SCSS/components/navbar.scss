@@ -66,10 +66,77 @@
   }
 }
 
+.nav-deploy-link {
+  width: 50px;
+  height: 50px;
+  display: none;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.3s ease-in-out;
+  border: none;
+
+  &.active {
+    background-color: vars.$color-a;
+  }
+}
+
+.nav-ico {
+  width: 20px;
+  height: 17px;
+}
+
+.nav-deploy {
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(67, 70, 86, 0.98);
+  width: 100%;
+  right: 0px;
+  top: 101px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &.open {
+    height: 480px;
+    padding: 25px 0px 0px 0px;
+  }
+}
+
+.nav-list-mobile {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 0px;
+
+  a {
+    display: inline-block;
+    padding: 25px 25px 25px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: typo.$font-b;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.3px;
+    color: #fff;
+  }
+
+  button {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+}
+
 // mobile - llamados en mobile.scss
 @mixin navbar--special-b() {
   .nav-list-header {
     display: none;
+  }
+
+  .nav-deploy-link {
+    display: flex;
   }
 
   .logo-header {
@@ -77,16 +144,33 @@
   }
 }
 
-@mixin navbar--lg() {
-
-}
-
 @mixin navbar--md() {
   .logo-header {
     padding: 15px 0px;
   }
-}
 
-@mixin navbar--sm() {
+  .nav-deploy {
+    top: 81px;
+  }
 
+  .nav-list-mobile {
+    align-items: center;
+
+    a {
+      display: inline-block;
+      padding: 25px 25px 25px 25px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: typo.$font-b;
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 200;
+      letter-spacing: 0.3px;
+      color: #fff;
+    }
+
+    button {
+      margin-left: 0px;
+    }
+  }
 }
