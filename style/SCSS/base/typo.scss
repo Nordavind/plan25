@@ -1,14 +1,17 @@
 @use '../utilities/variables' as vars;
 
-// typo
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sora:wght@100..800&display=swap');
+// // typo
+// @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sora:wght@100..800&display=swap');
 
 // variables Fuentes
 $font-a: 'Sora', sans-serif;
 $font-b: 'Lexend', sans-serif;
 
-// encabezados
+body {
+  font-family: 'Sora', sans-serif;
+}
 
+// encabezados
 h1 {
   font-family: $font-a;
   font-size: 2.8125rem;
