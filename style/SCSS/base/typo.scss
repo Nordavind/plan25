@@ -242,6 +242,17 @@ span {
   }
 }
 
+#current-year {
+  font-family: $font-a;
+  font-size: .9375rem;
+  line-height: 1.6875rem;
+  font-weight: 300;
+  color: vars.$font-color-a;
+  margin-bottom: 15px;
+  color: vars.$font-color-b;
+  margin-bottom: 0px;
+}
+
 // mobile - llamados en mobile.scss
 @mixin typo--special-b() {
 
@@ -309,6 +320,11 @@ span {
   }
 
   a {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  #current-year {
     font-size: 1rem;
     line-height: 1.75rem;
   }

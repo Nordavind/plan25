@@ -10,7 +10,7 @@
   margin: 0;
   font: inherit;
   color: inherit;
-  
+
   // Estilos base reales
   font-family: typo.$font-b;
   display: inline-block;
@@ -71,4 +71,25 @@
     color: vars.$color-a;
     border: 2px solid vars.$color-a;
   }
+}
+
+.whatsapp-button {
+  position: fixed;
+  z-index: 5;
+  bottom: 25px;
+  right: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  background-image: url('../img/whatsapp-ico.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

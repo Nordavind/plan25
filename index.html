@@ -37,9 +37,6 @@
   <!-- swiper-cdn -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- gsap-cdn -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-
   <!-- aos-cdn -->
 
   <!-- css -->
@@ -47,10 +44,11 @@
   <link rel="stylesheet" href="./style/style.css">
 
   <!-- scripts -->
-  <script defer src="./js/navbar.js"></script> 
+  <script defer src="./js/navbar.js"></script>
   <script defer src="./js/swiper-init.js"></script>
   <script defer src="./js/gsap-init.js"></script>
   <script defer src="./js/video-cta-init.js"></script>
+  <script defer src="./js/current-year.js"></script>
 </head>
 
 <body>
@@ -442,7 +440,8 @@
     </div>
     <div class="container sub-footer-container">
       <div>
-        <p class="p-dark">© 2025 | <strong>Plan Inmobiliaria</strong> | <strong>Nalp Constructora</strong> | Todos los
+        <p class="p-dark">©<span id="current-year"></span> | <strong>Plan Inmobiliaria</strong> | <strong>Nalp
+            Constructora</strong> | Todos los
           derechos reservados.</p>
         <a class="a-dark a-underline" href="#">Políticas de privacidad</a>
       </div>
@@ -453,4 +452,6 @@
         concretar la compra.</p>
     </div>
   </footer>
+  <a href="https://wa.me/56912345678" target="_blank" rel="noopener" class="whatsapp-button"
+    aria-label="Enviar mensaje por WhatsApp"></a>
 </body>
