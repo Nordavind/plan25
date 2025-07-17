@@ -1,4 +1,55 @@
+// CTA
+.cta-video {
+  position: relative;
+  overflow: hidden;
+
+  // background-image: url('../img/bernstein-slide-a.webp');
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+.cta-video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('../img/gridtile.png');
+  background-repeat: repeat;
+  background-size: 2px 2px;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.cta-video video {
+  // display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.cta-video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 37, 37, 0.5);
+  z-index: 2;
+  pointer-events: none;
+}
+
 .cta-container {
+  position: relative;
+  z-index: 4;
   padding-top: 80px;
   padding-bottom: 80px;
 }

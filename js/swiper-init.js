@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Swiper Projects Slider
   const projectsSlider = new Swiper('.swiper-projects-slider', {
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     autoHeight: true,
     spaceBetween: 60,
     lazy: {
