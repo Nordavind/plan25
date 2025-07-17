@@ -3,6 +3,7 @@
 @use './components/top-bar' as top-bar;
 @use './components/navbar' as navbar;
 @use './components/post-header' as post-header;
+@use './components/projects-slider' as projects-slider;
 @use './layouts/header-hero' as header-hero;
 @use './layouts/highlights' as highlights;
 @use './layouts/cta' as cta;
@@ -39,6 +40,7 @@
   @include typo.typo--md(); // base/typo.scss
   @include basic.basic--md(); // components/basic.scss
   @include navbar.navbar--md(); // components/navbar.scss
+  @include projects-slider.projects-slider--md(); // components/projects-slider.scss
   @include header-hero.header-hero--md(); // layouts/header-hero.scss
   @include about-us.about-us--md(); // layouts/about-us.scss
   @include contact.contact--md(); // layouts/contact.scss
@@ -54,5 +56,5 @@
   @include cta.cta--sm(); // layouts/cta.scss
   @include about-us.about-us--sm(); // layouts/about-us.scss
   @include contact.contact--sm(); // layouts/contact.scss
-    @include footer.footer--sm(); // layouts/footer.scss
+  @include footer.footer--sm(); // layouts/footer.scss
 }

@@ -16,6 +16,12 @@
   margin: auto;
 }
 
+.container-np {
+  max-width: 1280px;
+  margin: auto;
+}
+
+
 // Utils
 .mt {
   margin-top: 100PX;
@@ -27,6 +33,14 @@
 
 .int-mb {
   margin-bottom: 60px;
+}
+
+.pt {
+  padding-top: 100px;
+}
+
+.pb {
+  padding-bottom: 100px;
 }
 
 // mobile - llamados en mobile.scss
@@ -42,6 +56,15 @@
   .int-mb {
     margin-bottom: 60px;
   }
+
+  .pt {
+    padding-top: 80px;
+  }
+
+  .pb {
+    padding-bottom: 80px;
+  }
+
 }
 
 @mixin basic--md() {
@@ -67,5 +90,13 @@
 
   .int-mb {
     margin-bottom: 75px;
+  }
+
+  .pt {
+    padding-top: 75px;
+  }
+
+  .pb {
+    padding-bottom: 75px;
   }
 }

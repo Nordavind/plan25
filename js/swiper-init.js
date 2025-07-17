@@ -1,48 +1,72 @@
-// Swiper General
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  autoHeight: true,
-  // autoplay: {
-  //     delay: 4000,
-  //     disableOnInteraction: false,
-  // },
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-
-  // Lazyload
-   lazy: {
-    loadPrevNext: true,
-  },
-});
-
-// Botones personalizados
-const nextButtons = document.querySelectorAll('.btn-slide-next');
-const prevButtons = document.querySelectorAll('.btn-slide-prev');
-
-nextButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    swiper.slideNext();
+document.addEventListener('DOMContentLoaded', () => {
+  // Swiper Slider Header
+  const headerSwiper = new Swiper('.swiper-header-hero', {
+    direction: 'horizontal',
+    loop: true,
+    autoHeight: true,
+    nested: true,
+    lazy: {
+      loadPrevNext: true,
+    },
   });
-});
 
-prevButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    swiper.slidePrev();
+  const nextButtons = document.querySelectorAll('.btn-slide-next');
+  const prevButtons = document.querySelectorAll('.btn-slide-prev');
+
+  nextButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      headerSwiper.slideNext();
+    });
   });
+
+  prevButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      headerSwiper.slidePrev();
+    });
+  });
+
+  // Swiper Projects Slider
+  const projectsSlider = new Swiper('.swiper-projects-slider', {
+    direction: 'horizontal',
+    loop: false,
+    autoHeight: true,
+    spaceBetween: 60,
+    lazy: {
+      loadPrevNext: true,
+    },
+    on: {
+      init: function () {
+        renderProjectsPagination(this);
+        updateProjectsPagination(this.realIndex);
+      },
+      slideChange: function () {
+        updateProjectsPagination(this.realIndex);
+      },
+    },
+  });
+
+  function renderProjectsPagination(swiperInstance) {
+    const container = document.querySelector('.projects-slider-pagination');
+    if (!container) return;
+
+    container.innerHTML = '';
+    const slidesCount = swiperInstance.slides.length;
+
+    for (let i = 0; i < slidesCount; i++) {
+      const bullet = document.createElement('div');
+      bullet.classList.add('projects-slider-bullet');
+      bullet.dataset.index = i;
+      bullet.addEventListener('click', () => {
+        swiperInstance.slideTo(i);
+      });
+      container.appendChild(bullet);
+    }
+  }
+
+  function updateProjectsPagination(activeIndex) {
+    const bullets = document.querySelectorAll('.projects-slider-bullet');
+    bullets.forEach((bullet, i) => {
+      bullet.classList.toggle('active', i === activeIndex);
+    });
+  }
 });

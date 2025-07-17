@@ -23,11 +23,14 @@
   <meta property="og:type" content="website">
   <!-- swiper-cdn -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- gsap-cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./style/style.css">
   <!-- script -->
   <script defer src="./js/swiper-init.js"></script>
+  <script defer src="./js/gsap-init.js"></script>
 </head>
 
 <body>
@@ -61,7 +64,7 @@
       </ul>
     </div>
   </nav>
-  <section class="header-hero swiper">
+  <section class="swiper swiper-header-hero">
     <div class="swiper-wrapper">
       <div class="swiper-slide hero-slide-1">
         <div class="slider-container">
@@ -157,11 +160,77 @@
     </div>
   </section>
   <section class="light-bg">
-    <div class="container cta-container">
-      <p>Aca va el componente JS de showcase de los 3 ultimos proyectos</p>
+    <div class="container pt pb">
+      <div class="swiper swiper-projects-slider">
+        <div class="projects-slider-pagination"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide projects-slider-item">
+            <div class="projects-slider-content">
+              <div class="h3-wrapper-a">
+                <h3 class="h3-white-a">entrega 2do semestre 2025 </h3>
+              </div>
+              <h2 class="h2-projects-slider">Condominio Reina Bernstein</h2>
+              <span class="span-color-lh">Julia Bernstein #538, La Reina</span>
+              <div class="projects-slider-text">
+                <p>8 casas únicas de estilo contemporáneo de hasta 371m² totales ubicadas en la tradicional calle Julia
+                  Bernstein.</p>
+                <p class="p-nm">Cada unidad cuenta con 6 estacionamientos, espacio para toda tu familia y amigos. Una
+                  amplia calle conecta las 8 casas del condominio.</p>
+              </div>
+              <button class="button-a">Ver Proyecto</button>
+            </div>
+            <div class="projects-slider-img slide-bernstein-img">
+              <div class="projects-slider-img-label">
+                <span class="span-white">Últimas Unidades</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide projects-slider-item">
+            <div class="projects-slider-content">
+              <div class="h3-wrapper-a">
+                <h3 class="h3-white-a">entrega 1er semestre 2026</h3>
+              </div>
+              <h2 class="h2-projects-slider">Condominio Reina Vildósola</h2>
+              <span class="span-color-lh">Carlos Silva Vildósola #8639, La Reina</span>
+              <div class="projects-slider-text">
+                <p>8 casas únicas de estilo contemporáneo de hasta 371m² totales ubicadas en la tradicional calle Julia
+                  Bernstein.</p>
+                <p class="p-nm">Cada unidad cuenta con 6 estacionamientos, espacio para toda tu familia y amigos. Una
+                  amplia calle conecta las 8 casas del condominio.</p>
+              </div>
+              <button class="button-a">Ver Proyecto</button>
+            </div>
+            <div class="projects-slider-img slide-vildosola-img">
+              <div class="projects-slider-img-label">
+                <span class="span-white">Proyecto en Venta</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide projects-slider-item">
+            <div class="projects-slider-content">
+              <div class="h3-wrapper-a">
+                <h3 class="h3-white-a">Proyecto Entregado</h3>
+              </div>
+              <h2 class="h2-projects-slider">Condominio Reina Castillo</h2>
+              <span class="span-color-lh">Av. Alcalde Fernando Castillo Velasco #10726, La Reina</span>
+              <div class="projects-slider-text">
+                <p>8 casas únicas de estilo contemporáneo de hasta 371m² totales ubicadas en la tradicional calle Julia
+                  Bernstein.</p>
+                <p class="p-nm">Cada unidad cuenta con 6 estacionamientos, espacio para toda tu familia y amigos. Una
+                  amplia calle conecta las 8 casas del condominio.</p>
+              </div>
+              <button class="button-a">Ver Proyecto</button>
+            </div>
+            <div class="projects-slider-img slide-castillo-img">
+              <div class="projects-slider-img-label">
+                <span class="span-white">Proyecto Vendido</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
   <section class="cta-video dark-bg">
     <!-- <video autoplay muted loop playsinline class="cta-video-bg">
     <source src="/videos/cta-video.mp4" type="video/mp4" />
@@ -181,7 +250,6 @@
       </div>
     </div>
   </section>
-
   <section class="container mt mb">
     <div class="about-us">
       <div class="about-hl-grid">
@@ -340,10 +408,15 @@
     </div>
     <div class="container sub-footer-container">
       <div>
-        <p class="p-dark">© 2025  | <strong>Plan Inmobiliaria</strong> | <strong>Nalp Constructora</strong> |  Todos los derechos reservados.</p>
+        <p class="p-dark">© 2025 | <strong>Plan Inmobiliaria</strong> | <strong>Nalp Constructora</strong> | Todos los
+          derechos reservados.</p>
         <a class="a-dark a-underline" href="#">Políticas de privacidad</a>
       </div>
-      <p class="p-dark">Las imágenes presentadas son de carácter referencial y las dimensiones indicadas son aproximadas. Por lo tanto, no representan necesariamente una reproducción exacta del proyecto. Su propósito es mostrar las características generales y no los detalles específicos. Esta información se entrega conforme a lo establecido en la Ley Nº19.472. Se recomienda revisar el proyecto final y sus especificaciones técnicas antes de concretar la compra.</p>
+      <p class="p-dark">Las imágenes presentadas son de carácter referencial y las dimensiones indicadas son
+        aproximadas. Por lo tanto, no representan necesariamente una reproducción exacta del proyecto. Su propósito es
+        mostrar las características generales y no los detalles específicos. Esta información se entrega conforme a lo
+        establecido en la Ley Nº19.472. Se recomienda revisar el proyecto final y sus especificaciones técnicas antes de
+        concretar la compra.</p>
     </div>
   </section>
 </body>

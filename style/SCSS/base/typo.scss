@@ -37,6 +37,15 @@ h2 {
   &.h2-form {
     margin-bottom: 10px;
   }
+
+  &.h2-nm {
+    margin-bottom: 0px;
+  }
+
+  &.h2-projects-slider {
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
 }
 
 h3 {
@@ -203,6 +212,30 @@ a {
 
   &:hover {
     color: vars.$color-a;
+  }
+}
+
+span {
+  font-family: $font-b;
+  font-size: .9375rem;
+  line-height: .9375rem;
+  letter-spacing: 0.6px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: left;
+
+  &.span-color {
+    color: vars.$color-a;
+  }
+
+  &.span-color-lh {
+    color: vars.$color-a;
+    line-height: 20px;
+  }
+
+  &.span-white {
+    font-weight: 300;
+    color: white;
   }
 }
 

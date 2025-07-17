@@ -1,0 +1,136 @@
+@use '../utilities/variables' as vars;
+@use '../base/typo' as typo;
+
+// Paginacion
+.projects-slider-pagination {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.projects-slider-bullet {
+  width: 17px;
+  height: 17px;
+  background-color: vars.$line-color;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.projects-slider-bullet.active {
+  background-color: vars.$color-a;
+}
+
+// Projects Slider
+.swiper-projects-slider {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-slider-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.projects-slider-content {
+  width: 40%;
+  min-width: 340px;
+  margin-top: 57px;
+
+  .h3-wrapper-a {
+    margin-bottom: 10px;
+  }
+
+  .h2-projects-slider {
+    margin-bottom: 10px;
+  }
+
+  .span-color-lh {
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+}
+
+.projects-slider-text {
+  border-top: 1px dashed vars.$line-color;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.projects-slider-img {
+  position: relative;
+  z-index: 1;
+  border-radius: 60px 0px 60px 0px;
+  width: 60%;
+  min-height: 520px;
+  background-color: vars.$dark-gray;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.slide-bernstein-img {
+    background-image: url('../img/project-slider-bernstein.webp');
+  }
+
+  &.slide-vildosola-img {
+    background-image: url('../img/project-slider-vildosola.webp');
+  }
+
+  &.slide-castillo-img {
+    background-image: url('../img/project-slider-castillo.webp');
+  }
+}
+
+.projects-slider-img-label {
+  position: absolute;
+  z-index: 2;
+  display: inline-block;
+  border-radius: 30px;
+  padding: 6px 28px;
+  background-color: vars.$color-b;
+  top: 25px;
+  right: 25px;
+}
+
+// mobile - llamados en mobile.scss
+@mixin projects-slider--md() {
+  .projects-slider-pagination {
+    position: static;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .projects-slider-item {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .projects-slider-content {
+    order: 2;
+    width: 100%;
+    min-width: auto;
+    margin-top: 0px;
+    text-align: center;
+
+    .span-color-lh {
+      text-align: center;
+    }
+  }
+
+  .projects-slider-img {
+    order: 1;
+    border-radius: 60px 0px 60px 0px;
+
+    background-color: gray;
+    width: 100%;
+    min-height: 300px;
+  }
+}
