@@ -21,6 +21,7 @@
 
   h4 {
     margin-bottom: 15px;
+    max-width: 95%;
   }
 }
 
@@ -55,6 +56,10 @@
 
   .hl-grid-item {
     align-items: center;
+
+    h4 {
+      max-width: 100%;
+    }
 
     h4,
     p {

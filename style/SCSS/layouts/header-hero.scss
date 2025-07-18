@@ -78,7 +78,7 @@
 
 .hero-slide-2 {
   @extend %hero-slide-base;
-  background-image: url('../img/bernstein-slide-b.webp');
+  background-image: url('../img/vildosola-slide-a.webp');
 
   &::before {
     @extend %hero-slide-before;
@@ -234,7 +234,7 @@
   min-height: 100%;
 }
 
-.hero-int-slide-1 {
+.hero-int-slide-bernstein-1 {
   @extend %hero-int-base;
   background-image: url('../img/bernstein-slide-b.webp');
 
@@ -243,7 +243,7 @@
   }
 }
 
-.hero-int-slide-2 {
+.hero-int-slide-bernstein-2 {
   @extend %hero-int-base;
   background-image: url('../img/bernstein-slide-a.webp');
 
