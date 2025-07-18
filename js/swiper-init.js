@@ -29,6 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Swiper Slider Header Interior
+  const headerIntSwiper = new Swiper('.swiper-header-int', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
+    nested: true,
+    lazy: {
+      loadPrevNext: true,
+    },
+  });
+
+  const nextButtonsInt = document.querySelectorAll('.btn-slide-next');
+  const prevButtonsInt = document.querySelectorAll('.btn-slide-prev');
+
+  nextButtonsInt.forEach(btn => {
+    btn.addEventListener('click', () => {
+      headerIntSwiper.slideNext();
+    });
+  });
+
+  prevButtonsInt.forEach(btn => {
+    btn.addEventListener('click', () => {
+      headerIntSwiper.slidePrev();
+    });
+  });
+
   // Swiper Projects Slider
   const projectsSlider = new Swiper('.swiper-projects-slider', {
     direction: 'horizontal',

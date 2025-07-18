@@ -48,7 +48,6 @@
   <!-- scripts -->
   <script defer src="./js/navbar.js"></script>
   <script defer src="./js/swiper-init.js"></script>
-  <script defer src="./js/gsap-init.js"></script>
   <script defer src="./js/video-cta-init.js"></script>
   <script defer src="./js/current-year.js"></script>
 </head>
@@ -75,11 +74,11 @@
     <div class="container navbar-wrapper">
       <img class="logo-header" src="img/logo-plan.svg" alt="logo plan inmobiliaria">
       <ul class="nav-list-header">
-        <li><a class="activo" href="#">Inicio</a></li>
+        <li><a class="activo" href="index.html">Inicio</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#">Reina Bernstein</a></li>
-        <li><a href="#">Reina Vildosola</a></li>
+        <li><a href="reina-bernstein.html">Reina Bernstein</a></li>
+        <li><a href="reina-vildosola.html">Reina Vildosola</a></li>
         <li><button class="button-a" onclick="window.location.href='#contacto'">Contáctanos</button></li>
       </ul>
       <button id="navLink" class="nav-deploy-link">
@@ -87,11 +86,11 @@
       </button>
       <div id="navDeploy" class="nav-deploy">
         <ul class="nav-list-mobile">
-          <li><a href="#">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#">Reina Bernstein</a></li>
-          <li><a href="#">Reina Vildósola</a></li>
+          <li><a href="reina-bernstein.html">Reina Bernstein</a></li>
+          <li><a href="reina-vildosola.html">Reina Vildósola</a></li>
           <li><button class="button-a" onclick="window.location.href='#contacto'">Contáctanos</button></li>
         </ul>
       </div>
@@ -102,16 +101,16 @@
       <div class="swiper-slide hero-slide-1">
         <div class="slider-container">
           <div class="slider-content-wrapper">
-            <div data-aos="fade-right" data-aos-delay="50" class="h3-wrapper-a">
+            <div class="h3-wrapper-a">
               <h3 class="h3-white-a">entrega 2do semestre 2025 </h3>
             </div>
-            <h1 data-aos="fade-right" data-aos-delay="100">Reina Bernstein, <strong>una casa que se adapta</strong> a
+            <h1>Reina Bernstein, <strong>una casa que se adapta</strong> a
               tí.
             </h1>
-            <p data-aos="fade-right" data-aos-delay="150" class="p-white">8 casas únicas de estilo contemporáneo de
+            <p class="p-white">8 casas únicas de estilo contemporáneo de
               hasta 371m² totales, ubicadas en la tradicional
               calle Julia Bernstein.</p>
-            <a data-aos="fade-right" data-aos-delay="200" href="#" class="button-a">Ver Proyecto</a>
+            <a href="reina-bernstein.html" class="button-a">Ver Proyecto</a>
             <div class="btn-slide-wrapper">
               <button class="btn-slide-prev">
                 <img src="./img/slider-btn-ico.svg" alt="Anterior">
@@ -127,12 +126,12 @@
         <div class="slider-container">
           <div class="slider-content-wrapper">
             <div class="h3-wrapper-a">
-              <h3 class="h3-white-a">entrega 2do semestre 2025 </h3>
+              <h3 class="h3-white-a">entrega 1er semestre 2026</h3>
             </div>
             <h1>Reina Vildosola, <strong>elegancia urbana</strong>.</h1>
             <p class="p-white">Proyecto residencial de 6 casas exclusivas, diseñadas con una moderna arquitectura y una
               ubicación privilegiada.</p>
-            <a href="#" class="button-a">Ver Proyecto</a>
+            <a href="reina-vildosola.html" class="button-a">Ver Proyecto</a>
             <div class="btn-slide-wrapper">
               <button class="btn-slide-prev">
                 <img src="./img/slider-btn-ico.svg" alt="Anterior">
@@ -217,7 +216,7 @@
                 <p class="p-nm">Cada unidad cuenta con 6 estacionamientos, espacio para toda tu familia y amigos. Una
                   amplia calle conecta las 8 casas del condominio.</p>
               </div>
-              <a href="#" class="button-a">Ver Proyecto</a>
+              <a href="reina-bernstein.html" class="button-a">Ver Proyecto</a>
             </div>
             <div class="projects-slider-img slide-bernstein-img">
               <div class="projects-slider-img-label">
@@ -238,7 +237,7 @@
                 <p class="p-nm">Cada unidad cuenta con 6 estacionamientos, espacio para toda tu familia y amigos. Una
                   amplia calle conecta las 8 casas del condominio.</p>
               </div>
-              <a href="#" class="button-a">Ver Proyecto</a>
+              <a href="reina-vildosola.html" class="button-a">Ver Proyecto</a>
             </div>
             <div class="projects-slider-img slide-vildosola-img">
               <div class="projects-slider-img-label">
@@ -288,7 +287,7 @@
           panorámicas hacia la
           cordillera, este proyecto logra una armonía entre <strong>naturaleza</strong>, <strong>cercanía
             urbana</strong> y <strong>confort interior</strong>.</p>
-        <a data-aos="fade-up" data-aos-delay="100" href="#" class="button-ghost-a">Ver Proyecto</a>
+        <a data-aos="fade-up" data-aos-delay="100" href="reina-bernstein.html" class="button-ghost-a">Ver Proyecto</a>
       </div>
     </div>
   </section>
@@ -331,17 +330,16 @@
         <h2 data-aos="fade-up" data-aos-delay="50">Diseño inmobiliario que <strong>responde</strong> a las
           <strong>exigencias</strong> del presente.
         </h2>
-        <p>Somos PLAN Inmobiliaria, una empresa que se especializa en el desarrollo de proyectos inmobiliarios
+        <p data-aos="fade-up" data-aos-delay="0">Somos PLAN Inmobiliaria, una empresa que se especializa en el desarrollo de proyectos inmobiliarios
           cuidadosamente pensados y diseñados, teniendo como objetivo fundamental la creación de espacios habitacionales
           de excelencia.</p>
-        <p>Ponemos especial énfasis en que nuestras casas se construyan con materiales de la más alta calidad y, al
+        <p data-aos="fade-up" data-aos-delay="0">Ponemos especial énfasis en que nuestras casas se construyan con materiales de la más alta calidad y, al
           mismo tiempo, nos preocupamos de estar a la vanguardia en las últimas tendencias de diseño inmobiliario,
           innovando constantemente según las exigencias del mercado.</p>
-        <p>Como política de empresa, la atención integral de nuestros clientes constituye un pilar fundamental,
+        <p data-aos="fade-up" data-aos-delay="0">Como política de empresa, la atención integral de nuestros clientes constituye un pilar fundamental,
           prestando un servicio profesional y personalizado desde el momento de la primera visita, acompañándolos y
           asesorándolos durante todo el proceso de compra y posteriores requerimientos.</p>
       </div>
-
     </div>
   </section>
   <section>
@@ -413,12 +411,12 @@
       <div class="footer-col-b">
         <h5>Navegación</h5>
         <ul class="nav-list-footer">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Proyectos</a></li>
-          <li><a href="#">Reina Bernstein</a></li>
-          <li><a href="#">Reina Vildosola</a></li>
-          <li><a href="#">Contáctanos</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="reina-bernstein.html">Reina Bernstein</a></li>
+          <li><a href="reina-vildosola.html">Reina Vildosola</a></li>
+          <li><a href="#contacto">Contáctanos</a></li>
         </ul>
       </div>
       <div class="footer-col-b">
@@ -464,7 +462,7 @@
         concretar la compra.</p>
     </div>
   </footer>
-  <a href="https://wa.me/56956675955" target="_blank" rel="noopener" class="whatsapp-button"
+  <a href="https://wa.me/56956675955" target="_blank" rel="noopener" id="whatsappBtnHome" class="whatsapp-button"
     aria-label="Enviar mensaje por WhatsApp"></a>
   <!-- AOS -->
   <script>

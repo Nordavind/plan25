@@ -1,5 +1,6 @@
 @use './base/typo' as typo;
 @use './base/basic' as basic;
+@use './components/buttons' as buttons;
 @use './components/top-bar' as top-bar;
 @use './components/navbar' as navbar;
 @use './components/post-header' as post-header;
@@ -25,7 +26,7 @@
 
 // Large (lg)
 @media screen and (max-width: 992px) {
-  @include basic.basic--lg(); // components/basic.scss
+  @include basic.basic--lg(); //  base/basic.scss
   @include post-header.post-header--lg(); // components/post-header.scss
   @include header-hero.header-hero--lg(); // layouts/header-hero.scss
   @include highlights.highlights--lg(); // layouts/highlights.scss
@@ -38,7 +39,7 @@
 // Medium (md)
 @media screen and (max-width: 768px) {
   @include typo.typo--md(); // base/typo.scss
-  @include basic.basic--md(); // components/basic.scss
+  @include basic.basic--md(); //  base/basic.scss
   @include navbar.navbar--md(); // components/navbar.scss
   @include projects-slider.projects-slider--md(); // components/projects-slider.scss
   @include header-hero.header-hero--md(); // layouts/header-hero.scss
@@ -50,7 +51,8 @@
 // Small (sm)
 @media screen and (max-width: 576px) {
   @include typo.typo--sm(); // base/typo.scss
-  @include basic.basic--sm(); // components/basic.scss
+  @include basic.basic--sm(); // base/basic.scss
+  @include buttons.buttons--sm(); // components/buttons.scss
   @include top-bar.top-bar--sm(); // components/top-bar.scss
   @include header-hero.header-hero--sm(); // layouts/header-hero.scss
   @include highlights.highlights--sm(); // layouts/highlights.scss

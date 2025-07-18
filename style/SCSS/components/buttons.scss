@@ -55,10 +55,22 @@
   background-color: rgba(255, 255, 255, 0);
   border: 2px solid #fff;
 
+  &.ghost-hero {
+    text-align: center;
+    min-width: 192.02px;
+  }
+
   &:hover {
     color: vars.$color-a;
     border: 2px solid vars.$color-a;
   }
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .button-ghost-b {
@@ -92,4 +104,14 @@
   background-position: center;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+// mobile - llamados en mobile.scss
+@mixin buttons--sm() {
+  .buttons-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    align-items: center;
+  }
 }
