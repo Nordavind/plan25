@@ -6,15 +6,25 @@
   z-index: 0;
 }
 
-.diagonal-img-project {
+%diagonal-img-project-base {
   position: absolute;
   inset: 0;
   background-image: url('../img/diagonal-img-project.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: bottom center;
   z-index: 1;
   pointer-events: none;
+}
+
+.diagonal-img-project-a {
+  @extend %diagonal-img-project-base;
+  background-position: bottom center;
+}
+
+.diagonal-img-project-b {
+  @extend %diagonal-img-project-base;
+  transform: rotate(180deg);
+  background-position: top center;
 }
 
 .two-col-project {
@@ -39,6 +49,7 @@
 
 %project-ornament-base {
   position: absolute;
+  z-index: 3;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 80px;
@@ -52,8 +63,12 @@
   height: 548px;
 }
 
-// project ornament b
-
+.project-ornament-b {
+  @extend %project-ornament-base;
+  left: 250px;
+  width: 700px;
+  height: 548px;
+}
 
 .circle-wrapper {
   width: 100%;
@@ -78,6 +93,18 @@
     @extend %circle-base;
     bottom: 100px;
     right: -8px,
+  }
+
+  .circle-c {
+    @extend %circle-base;
+    top: -8px;
+    left: 100px,
+  }
+
+  .circle-d {
+    @extend %circle-base;
+    bottom: 100px;
+    left: -8px,
   }
 }
 
@@ -136,6 +163,11 @@
   .project-ornament-a {
     right: 100px;
   }
+
+  .project-ornament-b {
+    left: 100px;
+  }
+
 }
 
 @mixin project-sec--md() {
@@ -153,9 +185,12 @@
   }
 
   .project-ornament-a {
-    // REVISAR
     right: 250px;
-    width: 700px;
+    height: 548px;
+  }
+
+  .project-ornament-b {
+    left: 250px;
     height: 548px;
   }
 
@@ -166,12 +201,18 @@
 
   .two-col-project-content {
     width: 100%;
+    order: 2;
   }
 }
 
 @mixin project-sec--sm() {
   .project-ornament-a {
-    right: 200px;
+    right: 180px;
+    height: 500px;
+  }
+
+  .project-ornament-b {
+    left: 180px;
     height: 500px;
   }
 

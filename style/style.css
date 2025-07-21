@@ -1043,15 +1043,23 @@ html {
   z-index: 0;
 }
 
-.diagonal-img-project {
+.diagonal-img-project-b, .diagonal-img-project-a {
   position: absolute;
   inset: 0;
   background-image: url("../img/diagonal-img-project.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: bottom center;
   z-index: 1;
   pointer-events: none;
+}
+
+.diagonal-img-project-a {
+  background-position: bottom center;
+}
+
+.diagonal-img-project-b {
+  transform: rotate(180deg);
+  background-position: top center;
 }
 
 .two-col-project {
@@ -1074,8 +1082,9 @@ html {
   gap: 30px;
 }
 
-.project-ornament-a {
+.project-ornament-b, .project-ornament-a {
   position: absolute;
+  z-index: 3;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 80px;
@@ -1088,12 +1097,18 @@ html {
   height: 548px;
 }
 
+.project-ornament-b {
+  left: 250px;
+  width: 700px;
+  height: 548px;
+}
+
 .circle-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
 }
-.circle-wrapper .circle-b, .circle-wrapper .circle-a {
+.circle-wrapper .circle-d, .circle-wrapper .circle-c, .circle-wrapper .circle-b, .circle-wrapper .circle-a {
   width: 16px;
   height: 16px;
   border-radius: 30px;
@@ -1107,6 +1122,14 @@ html {
 .circle-wrapper .circle-b {
   bottom: 100px;
   right: -8px;
+}
+.circle-wrapper .circle-c {
+  top: -8px;
+  left: 100px;
+}
+.circle-wrapper .circle-d {
+  bottom: 100px;
+  left: -8px;
 }
 
 .project-img {
@@ -1529,6 +1552,9 @@ html {
   .project-ornament-a {
     right: 100px;
   }
+  .project-ornament-b {
+    left: 100px;
+  }
   .contact-container {
     padding-top: 80px;
   }
@@ -1667,7 +1693,10 @@ html {
   }
   .project-ornament-a {
     right: 250px;
-    width: 700px;
+    height: 548px;
+  }
+  .project-ornament-b {
+    left: 250px;
     height: 548px;
   }
   .project-img {
@@ -1676,6 +1705,7 @@ html {
   }
   .two-col-project-content {
     width: 100%;
+    order: 2;
   }
   .checkbox-wrapper {
     flex-flow: column nowrap;
@@ -1792,7 +1822,11 @@ html {
     right: 25px;
   }
   .project-ornament-a {
-    right: 200px;
+    right: 180px;
+    height: 500px;
+  }
+  .project-ornament-b {
+    left: 180px;
     height: 500px;
   }
   .project-img {
