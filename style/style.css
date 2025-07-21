@@ -299,7 +299,7 @@ html {
 }
 
 .pt-project {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .pb {
@@ -307,7 +307,7 @@ html {
 }
 
 .pb-project {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .hide {
@@ -1159,12 +1159,12 @@ html {
 }
 
 .project-img-bernstein-3 {
-  background-image: url("../img/project-img-bernstein-2.webp");
+  background-image: url("../img/project-img-bernstein-3.webp");
   align-self: flex-end;
 }
 
 .project-img-bernstein-4 {
-  background-image: url("../img/project-img-bernstein-2.webp");
+  background-image: url("../img/project-img-bernstein-4.webp");
   align-self: flex-start;
 }
 
@@ -1770,6 +1770,12 @@ html {
   }
   .pb {
     padding-bottom: 75px;
+  }
+  .pt-project {
+    padding-top: 27.5px;
+  }
+  .pb-project {
+    padding-bottom: 27.5px;
   }
   .buttons-wrapper {
     display: flex;
