@@ -1,0 +1,189 @@
+@use '../utilities/variables' as vars;
+
+// Project Section
+.project-section {
+  position: relative;
+  z-index: 0;
+}
+
+.diagonal-img-project {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/diagonal-img-project.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.two-col-project {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 60px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.two-col-project-imgs {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+}
+
+%project-ornament-base {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 80px;
+  border: 1px dashed white;
+}
+
+.project-ornament-a {
+  @extend %project-ornament-base;
+  right: 250px;
+  width: 700px;
+  height: 548px;
+}
+
+// project ornament b
+
+
+.circle-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  %circle-base {
+    width: 16px;
+    height: 16px;
+    border-radius: 30px;
+    background-color: white;
+    position: absolute;
+  }
+
+  .circle-a {
+    @extend %circle-base;
+    top: -8px;
+    right: 100px,
+  }
+
+  .circle-b {
+    @extend %circle-base;
+    bottom: 100px;
+    right: -8px,
+  }
+}
+
+.project-img {
+  background-color: white;
+  max-width: 500px;
+  width: 100%;
+  height: 340px;
+  border: solid 10px white;
+  border-radius: 0px 80px 0px 80px;
+}
+
+// Imagenes Interiores Proyectos
+%project-img-base {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.project-img-bernstein-1 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-bernstein-1.webp');
+  align-self: flex-start;
+}
+
+.project-img-bernstein-2 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-bernstein-2.webp');
+  align-self: flex-end;
+}
+
+.project-img-bernstein-3 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-bernstein-2.webp');
+  align-self: flex-end;
+}
+
+.project-img-bernstein-4 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-bernstein-2.webp');
+  align-self: flex-start;
+}
+
+// Text Content
+.two-col-project-content {
+  width: 50%;
+
+  .buttons-wrapper {
+    margin-top: 30px;
+  }
+}
+
+// mobile - llamados en mobile.scss
+@mixin project-sec--lg() {
+  .project-ornament-a {
+    right: 100px;
+  }
+}
+
+@mixin project-sec--md() {
+  .two-col-project {
+    flex-flow: column nowrap;
+    gap: 60px;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .two-col-project-imgs {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+  }
+
+  .project-ornament-a {
+    // REVISAR
+    right: 250px;
+    width: 700px;
+    height: 548px;
+  }
+
+  .project-img {
+    max-width: none;
+    height: 340px;
+  }
+
+  .two-col-project-content {
+    width: 100%;
+  }
+}
+
+@mixin project-sec--sm() {
+  .project-ornament-a {
+    right: 200px;
+    height: 500px;
+  }
+
+  .project-img {
+    max-width: none;
+    height: 300px;
+  }
+
+  .two-col-project-content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+  }
+}

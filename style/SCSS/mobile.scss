@@ -9,6 +9,7 @@
 @use './layouts/highlights' as highlights;
 @use './layouts/cta' as cta;
 @use './layouts/about-us' as about-us;
+@use './layouts/project-sec' as project-sec;
 @use './layouts/contact' as contact;
 @use './layouts/footer' as footer;
 
@@ -32,6 +33,7 @@
   @include highlights.highlights--lg(); // layouts/highlights.scss
   @include cta.cta--lg(); // layouts/cta.scss
   @include about-us.about-us--lg(); // layouts/about-us.scss
+  @include project-sec.project-sec--lg(); // layouts/project-sec.scss
   @include contact.contact--lg(); // layouts/contact.scss
   @include footer.footer--lg(); // layouts/footer.scss
 }
@@ -45,6 +47,7 @@
   @include header-hero.header-hero--md(); // layouts/header-hero.scss
   @include cta.cta--md(); // layouts/cta.scss
   @include about-us.about-us--md(); // layouts/about-us.scss
+  @include project-sec.project-sec--md(); // layouts/project-sec.scss
   @include contact.contact--md(); // layouts/contact.scss
 }
 
@@ -58,6 +61,7 @@
   @include highlights.highlights--sm(); // layouts/highlights.scss
   @include cta.cta--sm(); // layouts/cta.scss
   @include about-us.about-us--sm(); // layouts/about-us.scss
+  @include project-sec.project-sec--sm(); // layouts/project-sec.scss
   @include contact.contact--sm(); // layouts/contact.scss
   @include footer.footer--sm(); // layouts/footer.scss
 }
