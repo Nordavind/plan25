@@ -10,6 +10,7 @@
 @use './layouts/cta' as cta;
 @use './layouts/about-us' as about-us;
 @use './layouts/project-sec' as project-sec;
+@use './layouts/plant-sec' as plant-sec;
 @use './layouts/contact' as contact;
 @use './layouts/footer' as footer;
 
@@ -23,6 +24,7 @@
 @media screen and (max-width: 1140px) {
   @include typo.typo--special-b(); // base/typo.scss
   @include navbar.navbar--special-b(); // components/navbar.scss
+  @include plant-sec.plant-sec--special-b(); // layouts/plant-sec.scss
 }
 
 // Large (lg)
@@ -34,6 +36,7 @@
   @include cta.cta--lg(); // layouts/cta.scss
   @include about-us.about-us--lg(); // layouts/about-us.scss
   @include project-sec.project-sec--lg(); // layouts/project-sec.scss
+  @include plant-sec.plant-sec--lg(); // layouts/plant-sec.scss
   @include contact.contact--lg(); // layouts/contact.scss
   @include footer.footer--lg(); // layouts/footer.scss
 }
@@ -48,6 +51,7 @@
   @include cta.cta--md(); // layouts/cta.scss
   @include about-us.about-us--md(); // layouts/about-us.scss
   @include project-sec.project-sec--md(); // layouts/project-sec.scss
+  @include plant-sec.plant-sec--md(); // layouts/plant-sec.scss
   @include contact.contact--md(); // layouts/contact.scss
 }
 
@@ -62,6 +66,7 @@
   @include cta.cta--sm(); // layouts/cta.scss
   @include about-us.about-us--sm(); // layouts/about-us.scss
   @include project-sec.project-sec--sm(); // layouts/project-sec.scss
+  @include plant-sec.plant-sec--sm(); // layouts/plant-sec.scss
   @include contact.contact--sm(); // layouts/contact.scss
   @include footer.footer--sm(); // layouts/footer.scss
 }

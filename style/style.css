@@ -131,12 +131,21 @@ h3.h3-white-b {
 h4 {
   font-family: "Sora", sans-serif;
   font-size: 1.375rem;
-  line-height: 30px;
+  line-height: 1.875rem;
   font-weight: 400;
   color: #434656;
 }
 
 h5 {
+  font-family: "Sora", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 200;
+  color: #434656;
+  margin-bottom: 10px;
+}
+
+h6 {
   font-family: "Sora", sans-serif;
   font-size: 1.125rem;
   line-height: 1.125rem;
@@ -199,6 +208,19 @@ p.p-dark {
   color: #A7AABD;
   margin-bottom: 0px;
 }
+p.p-plant-data-title {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #434656;
+  margin-bottom: 8px;
+}
+p.p-plant-data-text {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 200;
+  margin-bottom: 0px;
+}
 
 a {
   all: unset;
@@ -245,6 +267,18 @@ span.span-color-lh {
 span.span-white {
   font-weight: 300;
   color: white;
+}
+span.span-plant-detail {
+  display: inline-block;
+  font-family: "Sora", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0px;
+  font-weight: 200;
+  text-transform: initial;
+  text-align: left;
+  color: #00AEBC;
+  margin-bottom: 20px;
 }
 
 #current-year {
@@ -1175,6 +1209,153 @@ html {
   margin-top: 30px;
 }
 
+.masterplan-img {
+  border-radius: 60px 0px 60px 0px;
+  width: 100%;
+}
+
+.masterplan-img-mb {
+  border-radius: 0px 60px 0px 60px;
+  width: 100%;
+  display: none;
+}
+
+.swiper-plan-item-main {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-plant-item-left {
+  width: 60%;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.swiper-plant-img {
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.swiper-plant-img-vertical {
+  display: none;
+}
+
+.swiper-plant-img-ornament {
+  position: absolute;
+  z-index: 1;
+  width: 660px;
+  height: 580px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100px;
+  border: 1px dashed #D7D9E0;
+}
+
+.swiper-plant-item-right {
+  width: 40%;
+  flex: 0 0 480px;
+}
+
+.btn-plant-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0px;
+  margin-bottom: 25px;
+}
+
+.btn-plant-prev, .btn-plant-next {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-plant-prev, .btn-plant-next {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #434656;
+  background-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+}
+.btn-plant-prev img, .btn-plant-next img {
+  width: 8.6px;
+  height: 15px;
+  pointer-events: none;
+}
+.btn-plant-prev:hover, .btn-plant-next:hover {
+  opacity: 70%;
+}
+
+.btn-plant-prev {
+  width: 36px;
+  border-right: none;
+}
+.btn-plant-prev img {
+  transform: rotate(180deg);
+}
+
+.plant-data-wrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 30px;
+}
+
+.plant-data-col {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.plant-data-line {
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  top: 0px;
+  width: 1px;
+  border-left: 1px dashed #D7D9E0;
+}
+.plant-data-line.plan-data-line-bernstein-a {
+  height: 286px;
+}
+.plant-data-line.plan-data-line-bernstein-b {
+  height: 226px;
+}
+
+.plant-data-item {
+  z-index: 2;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+
+.plant-data-numb {
+  width: 26px;
+  height: 26px;
+  background-color: #00AEBC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+.plant-data-numb span {
+  font-family: "Sora", sans-serif;
+  font-size: 0.875rem;
+  font-size: 0.875rem;
+  letter-spacing: 0px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+}
+
 .contact-main::before {
   content: "";
   position: absolute;
@@ -1451,11 +1632,6 @@ html {
   line-height: 20px;
 }
 
-.test {
-  background-color: red;
-  height: 100px;
-}
-
 @media screen and (max-width: 1400px) {
   .swiper-header-hero::before, .swiper-header-hero::after, .header-int::before, .header-int::after {
     content: none;
@@ -1481,6 +1657,24 @@ html {
   }
   .logo-header {
     padding: 25px 0px;
+  }
+  .swiper-plan-item-main {
+    align-items: flex-start;
+  }
+  .swiper-plant-item-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-plant-img {
+    display: none;
+  }
+  .swiper-plant-img-vertical {
+    display: block;
+    max-width: 100%;
+  }
+  .swiper-plant-img-ornament {
+    display: none;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1554,6 +1748,22 @@ html {
   }
   .project-ornament-b {
     left: 100px;
+  }
+  .swiper-plant-item-left {
+    width: 60%;
+    min-width: 409px;
+  }
+  .swiper-plant-item-right {
+    width: 50%;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .plant-data-wrapper {
+    flex-flow: column nowrap;
+    gap: 25px;
+  }
+  .plant-data-line.plan-data-line-bernstein-a {
+    height: 360px;
   }
   .contact-container {
     padding-top: 80px;
@@ -1707,6 +1917,34 @@ html {
     width: 100%;
     order: 2;
   }
+  .swiper-plan-item-main {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+  .swiper-plant-item-left {
+    min-width: 0;
+    width: 100%;
+    flex: 1 1 auto;
+  }
+  .swiper-plant-item-right {
+    min-width: 0;
+    width: 100%;
+    flex: 1 1 auto;
+  }
+  .swiper-plant-img {
+    display: block;
+  }
+  .swiper-plant-img-vertical {
+    display: none;
+  }
+  .plant-data-wrapper {
+    flex-flow: row nowrap;
+    gap: 30px;
+  }
+  .plant-data-line.plan-data-line-bernstein-a {
+    height: 286px;
+  }
   .checkbox-wrapper {
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -1844,6 +2082,25 @@ html {
     flex-flow: column nowrap;
     align-items: center;
     text-align: center;
+  }
+  .masterplan-img {
+    display: none;
+  }
+  .masterplan-img-mb {
+    display: block;
+  }
+  .swiper-plant-img {
+    display: none;
+  }
+  .swiper-plant-img-vertical {
+    display: block;
+  }
+  .plant-data-wrapper {
+    flex-flow: column nowrap;
+    gap: 25px;
+  }
+  .plant-data-line.plan-data-line-bernstein-a {
+    height: 360px;
   }
   .contact-container {
     padding-top: 75px;

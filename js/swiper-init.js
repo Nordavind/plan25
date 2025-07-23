@@ -106,4 +106,30 @@ document.addEventListener('DOMContentLoaded', () => {
       bullet.classList.toggle('active', i === activeIndex);
     });
   }
+
+  // Swiper Plant Slider
+  const plantSliderSwiper = new Swiper('.swiper-plant-slider', {
+    direction: 'horizontal',
+    loop: true,
+    autoHeight: true,
+    spaceBetween: 60,
+    lazy: {
+      loadPrevNext: true,
+    },
+  });
+
+  const nextButtonPlantSlider = document.querySelectorAll('.btn-plant-next');
+  const prevButtonPlantSlider = document.querySelectorAll('.btn-plant-prev');
+
+  nextButtonPlantSlider.forEach(btn => {
+    btn.addEventListener('click', () => {
+      plantSliderSwiper.slideNext();
+    });
+  });
+
+  prevButtonPlantSlider.forEach(btn => {
+    btn.addEventListener('click', () => {
+      plantSliderSwiper.slidePrev();
+    });
+  });
 });

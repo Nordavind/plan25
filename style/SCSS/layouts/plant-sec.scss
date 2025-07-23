@@ -1,0 +1,284 @@
+@use '../utilities/variables' as vars;
+@use '../base/typo' as typo;
+
+// Plant Section
+.masterplan-img {
+  border-radius: 60px 0px 60px 0px;
+  width: 100%;
+}
+
+.masterplan-img-mb {
+  border-radius: 0px 60px 0px 60px;
+  width: 100%;
+  display: none;
+}
+
+.swiper-plan-item-main {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-plant-item-left {
+  width: 60%;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.swiper-plant-img {
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.swiper-plant-img-vertical {
+  display: none;
+}
+
+.swiper-plant-img-ornament {
+  position: absolute;
+  z-index: 1;
+  width: 660px;
+  height: 580px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100px;
+  border: 1px dashed vars.$line-color;
+}
+
+.swiper-plant-item-right {
+  width: 40%;
+  flex: 0 0 480px;
+}
+
+// Botones Plan Wrapper
+.btn-plant-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0px;
+  margin-bottom: 25px;
+}
+
+// Botones Plan
+%btn-plant-reset {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%btn-plant-base {
+  @extend %btn-plant-reset;
+  width: 35px;
+  height: 35px;
+  border: 2px solid vars.$dark-gray;
+  background-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+
+  img {
+    width: 8.6px;
+    height: 15px;
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 70%;
+  }
+}
+
+.btn-plant-next {
+  @extend %btn-plant-base;
+}
+
+.btn-plant-prev {
+  @extend %btn-plant-base;
+
+  width: 36px;
+  border-right: none;
+
+  img {
+    transform: rotate(180deg);
+  }
+}
+
+.plant-data-wrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 30px;
+}
+
+.plant-data-col {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.plant-data-line {
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  top: 0px;
+  width: 1px;
+  border-left: 1px dashed vars.$line-color;
+
+  &.plan-data-line-bernstein-a {
+    height: 286px;
+  }
+
+  &.plan-data-line-bernstein-b {
+    height: 226px;
+  }
+}
+
+.plant-data-item {
+  z-index: 2;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+
+.plant-data-numb {
+  width: 26px;
+  height: 26px;
+  background-color: vars.$color-a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+
+  span {
+    font-family: typo.$font-a;
+    font-size: .875rem;
+    font-size: .875rem;
+    letter-spacing: 0px;
+    font-weight: 200;
+    text-align: center;
+    color: white;
+  }
+}
+
+// mobile - llamados en mobile.scss
+@mixin plant-sec--special-b() {
+  .swiper-plan-item-main {
+    align-items: flex-start;
+  }
+
+  .swiper-plant-item-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-plant-img {
+    display: none;
+  }
+
+  .swiper-plant-img-vertical {
+    display: block;
+    max-width: 100%;
+  }
+
+  .swiper-plant-img-ornament {
+    display: none;
+  }
+}
+
+@mixin plant-sec--lg() {
+  .swiper-plant-item-left {
+    width: 60%;
+    min-width: 409px;
+    // flex: 0 0 409px;
+  }
+
+  .swiper-plant-item-right {
+    width: 50%;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .plant-data-wrapper {
+    flex-flow: column nowrap;
+    gap: 25px
+  }
+
+  .plant-data-line {
+    &.plan-data-line-bernstein-a {
+      height: 360px;
+    }
+  }
+}
+
+@mixin plant-sec--md() {
+  .swiper-plan-item-main {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .swiper-plant-item-left {
+    min-width: 0;
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .swiper-plant-item-right {
+    min-width: 0;
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .swiper-plant-img {
+    display: block;
+  }
+
+  .swiper-plant-img-vertical {
+    display: none;
+  }
+
+  .plant-data-wrapper {
+    flex-flow: row nowrap;
+    gap: 30px;
+  }
+
+  .plant-data-line {
+    &.plan-data-line-bernstein-a {
+      height: 286px;
+    }
+  }
+}
+
+@mixin plant-sec--sm() {
+  .masterplan-img {
+    display: none;
+  }
+
+  .masterplan-img-mb {
+    display: block;
+  }
+
+  .swiper-plant-img {
+    display: none;
+  }
+
+  .swiper-plant-img-vertical {
+    display: block;
+  }
+
+  .plant-data-wrapper {
+    flex-flow: column nowrap;
+    gap: 25px
+  }
+
+  .plant-data-line {
+    &.plan-data-line-bernstein-a {
+      height: 360px;
+    }
+  }
+}
