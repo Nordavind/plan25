@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Swiper Slider Header
+  // Slider header
   const headerSwiper = new Swiper('.swiper-header-hero', {
     direction: 'horizontal',
     loop: true,
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Swiper Slider Header Interior
+  // Slider header interior
   const headerIntSwiper = new Swiper('.swiper-header-int', {
     direction: 'horizontal',
     loop: true,
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Swiper Projects Slider
+  // Projects slider
   const projectsSlider = new Swiper('.swiper-projects-slider', {
     direction: 'horizontal',
     loop: true,
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Swiper Plant Slider
+  // Plant slider
   const plantSliderSwiper = new Swiper('.swiper-plant-slider', {
     direction: 'horizontal',
     loop: true,
@@ -131,5 +131,18 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       plantSliderSwiper.slidePrev();
     });
+  });
+
+  // Image slider
+  const imgSliderSwiper = new Swiper('.swiper-img-slider', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: true,
+    },
+    lazy: {
+      loadPrevNext: true,
+    },
   });
 });

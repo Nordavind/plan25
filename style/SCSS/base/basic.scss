@@ -25,7 +25,6 @@ html {
   margin: auto;
 }
 
-
 // Utils
 .mt {
   margin-top: 100PX;
@@ -61,6 +60,22 @@ html {
   display: none;
 }
 
+// Layouts
+.two-col-util {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 60px;
+  align-items: center;
+}
+
+.two-col-item {
+  width: 50%;
+
+  .buttons-wrapper {
+    margin-top: 30px;
+  }
+}
+
 // mobile - llamados en mobile.scss
 @mixin basic--lg() {
   .mt {
@@ -83,6 +98,13 @@ html {
     padding-bottom: 80px;
   }
 
+  .two-col-util {
+    flex-flow: column nowrap;
+  }
+
+  .two-col-item {
+    width: 100%;
+  }
 }
 
 @mixin basic--md() {
@@ -124,5 +146,10 @@ html {
 
   .pb-project {
     padding-bottom: 27.5px;
+  }
+
+  .two-col-item {
+    align-items: center;
+    text-align: center;
   }
 }

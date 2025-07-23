@@ -5,6 +5,7 @@
 @use './components/navbar' as navbar;
 @use './components/post-header' as post-header;
 @use './components/projects-slider' as projects-slider;
+@use './components/img-slider' as img-slider;
 @use './layouts/header-hero' as header-hero;
 @use './layouts/highlights' as highlights;
 @use './layouts/cta' as cta;
@@ -31,6 +32,7 @@
 @media screen and (max-width: 992px) {
   @include basic.basic--lg(); //  base/basic.scss
   @include post-header.post-header--lg(); // components/post-header.scss
+  @include img-slider.img-slider--lg(); // components/img-slider.scss
   @include header-hero.header-hero--lg(); // layouts/header-hero.scss
   @include highlights.highlights--lg(); // layouts/highlights.scss
   @include cta.cta--lg(); // layouts/cta.scss
@@ -61,6 +63,7 @@
   @include basic.basic--sm(); // base/basic.scss
   @include buttons.buttons--sm(); // components/buttons.scss
   @include top-bar.top-bar--sm(); // components/top-bar.scss
+  @include img-slider.img-slider--sm(); // components/img-slider.scss
   @include header-hero.header-hero--sm(); // layouts/header-hero.scss
   @include highlights.highlights--sm(); // layouts/highlights.scss
   @include cta.cta--sm(); // layouts/cta.scss
