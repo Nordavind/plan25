@@ -135,6 +135,10 @@
   &.plan-data-line-bernstein-b {
     height: 226px;
   }
+
+  &.plan-data-line-bernstein-c {
+    height: 286px;
+  }
 }
 
 .plant-data-item {
@@ -156,7 +160,7 @@
   span {
     font-family: typo.$font-a;
     font-size: .875rem;
-    font-size: .875rem;
+    line-height: .875rem;
     letter-spacing: 0px;
     font-weight: 200;
     text-align: center;

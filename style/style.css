@@ -1001,6 +1001,33 @@ html {
   margin-bottom: 35px;
 }
 
+.cta-img {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-img-bernstein::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("../img/gridtile.png");
+  background-repeat: repeat;
+  background-size: 2px 2px;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.cta-img-bernstein {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.cta-img-bernstein {
+  background-image: url("../img/bernstein-cta.webp");
+}
 .about-us {
   display: flex;
   flex-flow: row nowrap;
@@ -1329,6 +1356,9 @@ html {
 .plant-data-line.plan-data-line-bernstein-b {
   height: 226px;
 }
+.plant-data-line.plan-data-line-bernstein-c {
+  height: 286px;
+}
 
 .plant-data-item {
   z-index: 2;
@@ -1349,7 +1379,7 @@ html {
 .plant-data-numb span {
   font-family: "Sora", sans-serif;
   font-size: 0.875rem;
-  font-size: 0.875rem;
+  line-height: 0.875rem;
   letter-spacing: 0px;
   font-weight: 200;
   text-align: center;

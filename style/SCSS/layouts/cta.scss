@@ -1,12 +1,7 @@
-// CTA
+// CTA Video
 .cta-video {
   position: relative;
   overflow: hidden;
-
-  // background-image: url('../img/bernstein-slide-a.webp');
-  // background-position: center center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
 }
 
 .cta-video::before {
@@ -78,6 +73,41 @@
 
   > :nth-child(2) {
     margin-bottom: 35px;
+  }
+}
+
+// CTA image
+.cta-img {
+  position: relative;
+  z-index: 1;
+}
+
+// Imagenes CTA
+%cta-img-before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('../img/gridtile.png');
+  background-repeat: repeat;
+  background-size: 2px 2px;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+%cta-img-base {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.cta-img-bernstein {
+  @extend %cta-img-base;
+  background-image: url('../img/bernstein-cta.webp');
+
+  &::before {
+    @extend %cta-img-before;
   }
 }
 
