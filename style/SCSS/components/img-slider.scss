@@ -9,11 +9,33 @@
   height: 575px;
 
   &.img-slider-bernstein-1 {
-    background-color: aqua;
+    background-image: url('../img/bernstein-cocina-a-1.webp');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &.img-slider-bernstein-2 {
-    background-color: red;
+    background-image: url('../img/bernstein-cocina-a-2.webp');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -1px;
+  }
+
+  &.img-slider-bernstein-3 {
+    background-image: url('../img/bernstein-cocina-b-1.webp');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.img-slider-bernstein-4 {
+    background-image: url('../img/bernstein-cocina-b-2.webp');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -1px;
   }
 }
 
