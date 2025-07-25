@@ -3,6 +3,7 @@
 @use './components/buttons' as buttons;
 @use './components/top-bar' as top-bar;
 @use './components/navbar' as navbar;
+@use './components/navbar-fixed' as navbar-fixed;
 @use './components/post-header' as post-header;
 @use './components/projects-slider' as projects-slider;
 @use './components/pan-slider' as pan-slider;
@@ -49,6 +50,7 @@
   @include typo.typo--md(); // base/typo.scss
   @include basic.basic--md(); //  base/basic.scss
   @include navbar.navbar--md(); // components/navbar.scss
+  @include navbar-fixed.navbar-fixed--md(); // components/navbar-fixed.scss
   @include projects-slider.projects-slider--md(); // components/projects-slider.scss
   @include header-hero.header-hero--md(); // layouts/header-hero.scss
   @include cta.cta--md(); // layouts/cta.scss

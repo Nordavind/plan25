@@ -1,0 +1,32 @@
+/* Navbar Mob Fixed */
+.logo-navbar-fixed {
+  width: 145px;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: -77.23px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  padding: 15px 20px;
+  display: none;
+  // display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.1);
+  transition: top 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.navbar-fixed.show {
+  top: 0;
+}
+
+// mobile - llamados en mobile.scss
+@mixin navbar-fixed--md() {
+  .navbar-fixed {
+    display: flex;
+  }
+}

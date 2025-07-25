@@ -55,6 +55,7 @@
 
   <!-- scripts -->
   <script defer src="./js/navbar.js"></script>
+  <script defer src="./js/navbar-fixed.js"></script>
   <script defer src="./js/swiper-init.js"></script>
   <script defer src="./js/video-cta-init.js"></script>
   <script defer src="./js/masonry-gallery-init.js"></script>
@@ -62,7 +63,7 @@
 </head>
 
 <body>
-  <section class="dark-bg">
+  <section id="inicio" class="dark-bg">
     <div class="container top-bar-wrapper">
       <div class="top-bar-l">
         <p class="p-top-bar">Bienvenido a <strong>PLAN Inmobiliaria</strong></p>
@@ -105,7 +106,7 @@
       </div>
     </div>
   </nav>
-  <header class="header-int">
+  <header id="observerTrigger" class="header-int">
     <div class="swiper-header-int">
       <div class="swiper-wrapper">
         <div class="swiper-slide hero-int-slide-bernstein-1"></div>
@@ -145,6 +146,10 @@
       <a class="button-ghost-b" href="#contacto-bernstein">Saber Más</a>
     </div>
   </section>
+  <div class="navbar-fixed">
+    <a href="#inicio"><img class="logo-navbar-fixed" src="img/logo-plan-c.svg" alt="logo plan inmobiliaria"></a>
+    <a href="#contacto-bernstein" class="button-navbar-fixed">Agendar Visita</a>
+  </div>
   <section class="container pt">
     <div class="hl-title int-mb">
       <div data-aos="fade-down" data-aos-delay="0" class="h3-wrapper-b">
@@ -555,13 +560,10 @@
     </div>
   </section>
   <section class="container mb">
-
     <div class="masonry-gallery-wrapper">
       <div id="galeria-bernstein" class="masonry-gallery">
       </div>
     </div>
-
-
   </section>
   <section>
     <iframe

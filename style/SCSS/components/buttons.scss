@@ -26,6 +26,15 @@
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+.button-navbar-fixed {
+  @extend %button-base;
+  font-size: .9375rem;
+  line-height: .9375rem;
+  color: #fff;
+  background-color: vars.$color-b;
+  padding: 15px 25px;
+}
+
 .button-a {
   @extend %button-base;
   color: #fff;
@@ -66,13 +75,6 @@
   }
 }
 
-.buttons-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 20px;
-  align-items: flex-start;
-}
-
 .button-ghost-b {
   @extend %button-base;
   color: vars.$font-color-b;
@@ -83,6 +85,13 @@
     color: vars.$color-a;
     border: 2px solid vars.$color-a;
   }
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .whatsapp-button {
