@@ -20,13 +20,34 @@ document.addEventListener("DOMContentLoaded", function () {
   // Ejecuta el observer
   observer.observe(observerTrigger);
 
+  // Navbar esconde en form
+  const form = document.querySelector('.contact-main');
+  let isFormOutOfView = true;
+
+  const observerForm = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        navbarFixed.classList.add('show');
+        isFormOutOfView = true;
+        console.log(isFormOutOfView);
+      } else {
+        isFormOutOfView = false;
+        navbarFixed.classList.remove('show');
+        console.log(isFormOutOfView);
+      }
+    });
+  });
+
+  // Ejecuta el observer
+  observerForm.observe(form);
+
   // Navbar hide on sroll
   let lastScrollTop = 0;
 
   const handleScroll = () => {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (isObserverTriggerOutOfView) {
+    if (isObserverTriggerOutOfView && isFormOutOfView) {
       if (currentScroll > lastScrollTop) {
         navbarFixed.classList.remove('show');
       } else {
