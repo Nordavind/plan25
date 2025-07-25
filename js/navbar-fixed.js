@@ -3,16 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const observerTrigger = document.getElementById('observerTrigger');
   const navbarFixed = document.querySelector('.navbar-fixed');
   let isObserverTriggerOutOfView = false;
+  let isInsideContact = false;
 
-  // Navbar show
+  // Muestra navbar
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
-        navbarFixed.classList.add('show');
         isObserverTriggerOutOfView = true;
       } else {
         isObserverTriggerOutOfView = false;
-        navbarFixed.classList.remove('show');
       }
     });
   });
@@ -20,39 +19,37 @@ document.addEventListener("DOMContentLoaded", function () {
   // Ejecuta el observer
   observer.observe(observerTrigger);
 
-  // // Navbar esconde en form
-  // const form = document.querySelector('.contact-main');
-  // let isFormOutOfView = true;
+  // Detecta si esta dentro del formulario
+  const contactSection = document.querySelector('.contact-main');
+  if (contactSection) {
+    const observerContact = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          isInsideContact = true;
+        } else {
+          isInsideContact = false;
+        }
+      });
+    });
+    observerContact.observe(contactSection);
+  }
 
-  // const observerForm = new IntersectionObserver(entries => {
-  //   entries.forEach(entry => {
-  //     if (!entry.isIntersecting) {
-  //       navbarFixed.classList.add('show');
-  //       isFormOutOfView = true;
-  //       console.log(isFormOutOfView);
-  //     } else {
-  //       isFormOutOfView = false;
-  //       navbarFixed.classList.remove('show');
-  //       console.log(isFormOutOfView);
-  //     }
-  //   });
-  // });
-
-  // // Ejecuta el observer
-  // observerForm.observe(form);
-
-  // Navbar hide on sroll
+  // Esconde navbar en scroll
   let lastScrollTop = 0;
 
   const handleScroll = () => {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (isObserverTriggerOutOfView) {
+    if (isInsideContact) {
+      navbarFixed.classList.remove('show');
+    } else if (isObserverTriggerOutOfView) {
       if (currentScroll > lastScrollTop) {
         navbarFixed.classList.remove('show');
       } else {
         navbarFixed.classList.add('show');
       }
+    } else {
+      navbarFixed.classList.remove('show');
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
@@ -68,4 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   window.addEventListener('scroll', debounce(handleScroll, 10));
+
+  // Ejecuta una vez para setear estado inicial bien
+  handleScroll();
 });
