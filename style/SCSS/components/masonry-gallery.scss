@@ -1,0 +1,19 @@
+// Masonry Gallery
+.masonry-gallery {
+  width: 100%;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.masonry-item {
+  width: calc(33.333% - 20px);
+  margin: 0 10px 20px 10px;
+  box-sizing: border-box;
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}

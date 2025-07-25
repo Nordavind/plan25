@@ -133,15 +133,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Image slider
-  const imgSliderSwiper = new Swiper('.swiper-img-slider', {
+  // Pan slider
+  const imgSliderSwiper = new Swiper('.swiper-pan-slider', {
     direction: 'horizontal',
     spaceBetween: 0,
     slidesPerView: 1,
     loop: true,
     speed: 1000,
     autoplay: {
-      delay: 2000,
+      delay: 1000,
       disableOnInteraction: true,
     },
     lazy: {

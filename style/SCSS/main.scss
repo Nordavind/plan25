@@ -9,7 +9,8 @@
 @use 'components/navbar';
 @use 'components/post-header';
 @use 'components/projects-slider';
-@use 'components/img-slider';
+@use 'components/pan-slider';
+@use 'components/masonry-gallery';
 @use 'layouts/header-hero';
 @use 'layouts/highlights';
 @use 'layouts/cta';

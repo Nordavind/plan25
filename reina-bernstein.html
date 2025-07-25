@@ -41,6 +41,14 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <!-- glightbox -->
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- masonry.js + imagesloaded -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./style/style.css">
@@ -49,6 +57,7 @@
   <script defer src="./js/navbar.js"></script>
   <script defer src="./js/swiper-init.js"></script>
   <script defer src="./js/video-cta-init.js"></script>
+  <script defer src="./js/gallery-init.js"></script>
   <script defer src="./js/current-year.js"></script>
 </head>
 
@@ -512,16 +521,15 @@
       </div>
     </div>
   </section>
-
   <section class="container mt mb">
     <div class="two-col-util">
       <div class="two-col-item">
-        <div data-aos="fade-up" data-aos-delay="0" class="swiper swiper-img-slider">
+        <div data-aos="fade-up" data-aos-delay="0" class="swiper swiper-pan-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-img-slider-item img-slider-bernstein-1"></div>
-            <div class="swiper-slide swiper-img-slider-item img-slider-bernstein-2"></div>
-            <div class="swiper-slide swiper-img-slider-item img-slider-bernstein-3"></div>
-            <div class="swiper-slide swiper-img-slider-item img-slider-bernstein-4"></div>
+            <div class="swiper-slide swiper-pan-slider-item pan-slider-bernstein-1"></div>
+            <div class="swiper-slide swiper-pan-slider-item pan-slider-bernstein-2"></div>
+            <div class="swiper-slide swiper-pan-slider-item pan-slider-bernstein-3"></div>
+            <div class="swiper-slide swiper-pan-slider-item pan-slider-bernstein-4"></div>
           </div>
         </div>
       </div>
@@ -532,14 +540,36 @@
         <h2 data-aos="fade-up" data-aos-delay="50">Diseño inmobiliario que <strong>responde</strong> a las
           <strong>exigencias</strong> del presente.
         </h2>
-        <p data-aos="fade-up" data-aos-delay="0">Uno de los puntos fuertes del proyecto es su cocina. Un espacio protagonista de 35m² desarrollado junto a Studio MK y equipado con mobiliario de la reconocida marca brasileña SCA. Este espacio se diseñó con una visión abierta y familiar, donde la funcionalidad se une a un estilo minimalista y sofisticado.</p>
-        <p data-aos="fade-up" data-aos-delay="0">La cubierta de cuarzo blanca, la grifería cromada sustentable y los tiradores negros son elementos que elevan la experiencia visual y táctil de quienes habitan este corazón de la casa.</p>
+        <p data-aos="fade-up" data-aos-delay="0">Uno de los puntos fuertes del proyecto es su cocina. Un espacio
+          protagonista de 35m² desarrollado junto a Studio MK y equipado con mobiliario de la reconocida marca brasileña
+          SCA. Este espacio se diseñó con una visión abierta y familiar, donde la funcionalidad se une a un estilo
+          minimalista y sofisticado.</p>
+        <p data-aos="fade-up" data-aos-delay="0">La cubierta de cuarzo blanca, la grifería cromada sustentable y los
+          tiradores negros son elementos que elevan la experiencia visual y táctil de quienes habitan este corazón de la
+          casa.</p>
         <div data-aos="fade-up" data-aos-delay="0" class="buttons-wrapper">
           <a href="#contacto-bernstein" class="button-b">Agendar Visita</a>
           <a href="#contacto-bernstein" class="button-a">Descubre Más</a>
         </div>
       </div>
     </div>
+  </section>
+
+
+  <section class="container mb">
+
+    <div id="galeria-bernstein" class="masonry-gallery">
+
+    </div>
+
+  </section>
+
+
+  <section>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.007247978684!2d-70.52665068830699!3d-33.44911769733365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cde050ffeaab%3A0x5249a5f9e5ce54a1!2sJulia%20Bernstein%20538%2C%20La%20Reina%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1753374621941!5m2!1ses!2scl"
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
   <section id="contacto-bernstein" class="contact-main">
     <div class="container contact-container">

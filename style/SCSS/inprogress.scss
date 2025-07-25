@@ -1,3 +1,6 @@
 @use './utilities/variables' as vars;
 @use './base/typo' as typo;
 
+.hide {
+  display: none;
+}
