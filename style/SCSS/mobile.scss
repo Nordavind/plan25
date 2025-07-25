@@ -6,6 +6,7 @@
 @use './components/post-header' as post-header;
 @use './components/projects-slider' as projects-slider;
 @use './components/pan-slider' as pan-slider;
+@use './components/masonry-gallery' as masonry-gallery;
 @use './layouts/header-hero' as header-hero;
 @use './layouts/highlights' as highlights;
 @use './layouts/cta' as cta;
@@ -64,6 +65,7 @@
   @include buttons.buttons--sm(); // components/buttons.scss
   @include top-bar.top-bar--sm(); // components/top-bar.scss
   @include pan-slider.pan-slider--sm(); // components/pan-slider.scss
+  @include masonry-gallery.masonry-gallery--sm(); // components/masonry-gallery.scss
   @include header-hero.header-hero--sm(); // layouts/header-hero.scss
   @include highlights.highlights--sm(); // layouts/highlights.scss
   @include cta.cta--sm(); // layouts/cta.scss

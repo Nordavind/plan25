@@ -1,4 +1,10 @@
 // Masonry Gallery
+.masonry-gallery-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .masonry-gallery {
   width: 100%;
   margin-left: -10px;
@@ -16,4 +22,17 @@
   height: auto;
   display: block;
   box-sizing: border-box;
+}
+
+// mobile - llamados en mobile.scss
+@mixin masonry-gallery--sm() {
+  .masonry-gallery {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .masonry-item {
+    width: calc(33.333% - 10px);
+    margin: 0 5px 10px 5px;
+  }
 }
