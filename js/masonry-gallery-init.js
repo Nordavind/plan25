@@ -56,7 +56,7 @@ function inicializarGaleria({ selector, jsonUrl, galleryName }) {
 document.addEventListener('DOMContentLoaded', () => {
   inicializarGaleria({
     selector: '#galeria-bernstein',
-    jsonUrl: '/json/bernstein-gallery.json',
+    jsonUrl: 'json/bernstein-gallery.json',
     galleryName: 'galeria-bernstein'
   });
 });
