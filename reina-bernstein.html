@@ -8,7 +8,7 @@
   <meta name="description"
     content="Reina Bernstein es un exclusivo proyecto de casas independientes en la comuna de La Reina, con diseño contemporáneo, vistas despejadas y excelente conectividad.">
   <meta name="keywords"
-    content="Reina Bernstein, Plan Inmobiliaria, NALP Constructora, proyectos inmobiliarios, casas en La Reina, desarrollo habitacional, diseño inmobiliario, inmobiliaria Santiago, compra de casas, viviendas de calidad, proyectos residenciales, arquitectura moderna, atención personalizada, casas exclusivas, diseño y construcción, constructoras en Chile">
+    content="Reina Bernstein, Plan Inmobiliaria, Julia Bernstein, NALP Constructora, proyectos inmobiliarios, casas en La Reina, desarrollo habitacional, diseño inmobiliario, inmobiliaria Santiago, compra de casas, viviendas de calidad, proyectos residenciales, arquitectura moderna, atención personalizada, casas exclusivas, diseño y construcción, constructoras en Chile">
   <link rel="icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="canonical" href="https://www.planinmobiliaria.cl/reina-bernstein.html" />
@@ -59,6 +59,7 @@
   <script defer src="./js/swiper-init.js"></script>
   <script defer src="./js/video-cta-init.js"></script>
   <script defer src="./js/masonry-gallery-init.js"></script>
+  <script defer src="./js/forms.js"></script>
   <script defer src="./js/current-year.js"></script>
 </head>
 
@@ -69,14 +70,14 @@
         <p class="p-top-bar">Bienvenido a <strong>PLAN Inmobiliaria</strong></p>
       </div>
       <div class="top-bar-r">
-        <a class="social-icon-topbar-link" href="https://www.instagram.com/planinmobiliaria/"><img class="social-icon-topbar-link-img" src="img/insta-ico.svg"
-            alt="icono instagram"></a>
-        <a class="social-icon-topbar-link" href="https://www.facebook.com/profile.php?id=100090112208982"><img class="social-icon-topbar-link-img" src="img/fb-ico.svg"
-            alt="icono facebook"></a>
+        <a class="social-icon-topbar-link" href="https://www.instagram.com/planinmobiliaria/"><img
+            class="social-icon-topbar-link-img" src="img/insta-ico.svg" alt="icono instagram"></a>
+        <a class="social-icon-topbar-link" href="https://www.facebook.com/profile.php?id=100090112208982"><img
+            class="social-icon-topbar-link-img" src="img/fb-ico.svg" alt="icono facebook"></a>
         <!-- <a class="social-icon-topbar-link" href="#"><img class="social-icon-topbar-link-img" src="img/in-ico.svg"
             alt="icono linkedin"></a> -->
-        <a class="social-icon-topbar-link" href="https://www.youtube.com/@planinmobiliaria9528"><img class="social-icon-topbar-link-img" src="img/yt-ico.svg"
-            alt="icono youtube"></a>
+        <a class="social-icon-topbar-link" href="https://www.youtube.com/@planinmobiliaria9528"><img
+            class="social-icon-topbar-link-img" src="img/yt-ico.svg" alt="icono youtube"></a>
       </div>
     </div>
   </section>
@@ -223,7 +224,7 @@
           confort interior.</p>
         <div data-aos="fade-up" data-aos-delay="0" class="buttons-wrapper">
           <a href="#contacto-bernstein" class="button-b">Agendar Visita</a>
-          <a href="#" class="button-a">Book del Proyecto</a>
+          <a href="docs/book-condominio-reina-bernstein-2025.pdf" class="button-a">Book del Proyecto</a>
         </div>
       </div>
     </div>
@@ -520,7 +521,7 @@
         <p class="p-cta">La cocina y los baños <strong>han sido desarrollados en colaboración con la reconocida marca
             MK</strong>, con mobiliario diseñado especialmente para el proyecto.</p>
         <div class="buttons-wrapper">
-          <a href="#" class="button-ghost-a">Book Proyecto</a>
+          <a href="docs/book-condominio-reina-bernstein-2025.pdf" class="button-ghost-a">Book Proyecto</a>
           <a href="https://www.mk.cl/" class="button-ghost-a">Sitio Web MK</a>
         </div>
       </div>
@@ -577,18 +578,14 @@
         <h2 class="h2-form">¿Quieres saber más o agendar una visita?</h2>
         <p class="p-form">¿Tienes alguna pregunta o deseas agendar una visita? Completa el formulario o puedes visitar
           el proyecto en Julia Bernstein #538, La Reina.</p>
-        <form id="formMain" action="" method="POST">
-          <input type="hidden" name="access_key" value="">
-          <input type="hidden" name="subject" value="Lead formulario Reina Bernstein">
-          <input type="hidden" name="from_name" value="PLAN Web">
-          <input type="hidden" name="redirect" value="https://www.planinmobiliaria.cl/exito.html">
+        <form id="formBernstein">
 
           <input type="text" id="formName" name="nombre" placeholder="Nombre*" required>
           <input type="email" id="formEmail" name="email" placeholder="Correo Electrónico*" required>
           <input type="tel" id="formTelephone" name="telefono" placeholder="Teléfono">
           <textarea id="formMessage" name="mensaje" placeholder="Escriba su mensaje*" required></textarea>
 
-          <div class="checkbox-wrapper">
+          <div class="checkbox-wrapper" data-required>
             <p class="p-nm">Deseo ser contactado vía:</p>
             <div class="checkbox-subwrapper">
               <div class="checkbox-item">
@@ -620,14 +617,14 @@
           cuidadosamente pensados y diseñados, teniendo como objetivo fundamental la creación de espacios habitacionales
           de excelencia.</p>
         <div class="social-footer">
-          <a class="social-icon-footer" href="https://www.instagram.com/planinmobiliaria/"><img class="social-icon-topbar-link-img" src="img/insta-ico.svg"
-              alt="icono instagram"></a>
-          <a class="social-icon-footer" href="https://www.facebook.com/profile.php?id=100090112208982"><img class="social-icon-topbar-link-img" src="img/fb-ico.svg"
-              alt="icono facebook"></a>
+          <a class="social-icon-footer" href="https://www.instagram.com/planinmobiliaria/"><img
+              class="social-icon-topbar-link-img" src="img/insta-ico.svg" alt="icono instagram"></a>
+          <a class="social-icon-footer" href="https://www.facebook.com/profile.php?id=100090112208982"><img
+              class="social-icon-topbar-link-img" src="img/fb-ico.svg" alt="icono facebook"></a>
           <!-- <a class="social-icon-footer" href="#"><img class="social-icon-topbar-link-img" src="img/in-ico.svg"
               alt="icono linkedin"></a> -->
-          <a class="social-icon-footer" href="https://www.youtube.com/@planinmobiliaria9528"><img class="social-icon-topbar-link-img" src="img/yt-ico.svg"
-              alt="icono youtube"></a>
+          <a class="social-icon-footer" href="https://www.youtube.com/@planinmobiliaria9528"><img
+              class="social-icon-topbar-link-img" src="img/yt-ico.svg" alt="icono youtube"></a>
         </div>
       </div>
       <div class="footer-col-b">

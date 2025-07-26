@@ -251,6 +251,24 @@
   }
 }
 
+.hero-int-slide-vildosola-1 {
+  @extend %hero-int-base;
+  background-image: url('../img/vildosola-slide-b.webp');
+
+  &::before {
+    @extend %hero-slide-before;
+  }
+}
+
+.hero-int-slide-vildosola-2 {
+  @extend %hero-int-base;
+  background-image: url('../img/vildosola-slide-a.webp');
+
+  &::before {
+    @extend %hero-slide-before;
+  }
+}
+
 // mobile - llamados en mobile.scss
 @mixin header-hero--special-a() {
   .swiper-header-hero, .header-int {

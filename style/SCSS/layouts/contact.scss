@@ -51,13 +51,18 @@
 }
 
 // Formulario
-#formMain {
+
+#formMain,
+#formBernstein,
+#formVildosola {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-#formMain * {
+#formMain *,
+#formBernstein *,
+#formVildosola * {
   font-family: typo.$font-a;
   color: vars.$font-color-a;
   font-size: .9375rem;
@@ -66,12 +71,20 @@
 }
 
 #formMain input::placeholder,
-#formMain textarea::placeholder {
+#formMain textarea::placeholder,
+#formBernstein input::placeholder,
+#formBernstein textarea::placeholder,
+#formVildosola input::placeholder,
+#formVildosola textarea::placeholder {
   color: vars.$font-color-a;
 }
 
 #formMain input:focus,
-#formMain textarea:focus {
+#formMain textarea:focus,
+#formBernstein input:focus,
+#formBernstein textarea:focus,
+#formVildosola input:focus,
+#formVildosola textarea:focus {
   border-color: vars.$color-a;
   outline: none;
 }

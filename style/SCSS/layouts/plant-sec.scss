@@ -168,6 +168,30 @@
   }
 }
 
+.plant-data-simple-wrapper {
+  margin-top: 10px;
+  min-height: 450px;
+}
+
+ul.plant-data-simple-list {
+  list-style-type: disc;
+  padding-left: 20px;
+
+  li {
+    position: relative;
+    font-family: typo.$font-a;
+    font-size: .9375rem;
+    line-height: 1.6875rem;
+    font-weight: 300;
+    color: vars.$font-color-a;
+    margin-bottom: 5px;
+
+    &::marker {
+      color: vars.$color-a;
+    }
+  }
+}
+
 // mobile - llamados en mobile.scss
 @mixin plant-sec--special-b() {
   .swiper-plan-item-main {
@@ -256,6 +280,11 @@
       height: 286px;
     }
   }
+
+  .plant-data-simple-wrapper {
+    margin-top: 10px;
+    min-height: 0px;
+  }
 }
 
 @mixin plant-sec--sm() {
@@ -283,6 +312,14 @@
   .plant-data-line {
     &.plan-data-line-bernstein-a {
       height: 360px;
+    }
+  }
+
+  ul.plant-data-simple-list {
+
+    li {
+      font-size: 1rem;
+      line-height: 1.75rem;
     }
   }
 }

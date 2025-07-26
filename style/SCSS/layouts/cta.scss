@@ -111,6 +111,15 @@
   }
 }
 
+.cta-img-vildosola {
+  @extend %cta-img-base;
+  background-image: url('../img/vildosola-cta.webp');
+
+  &::before {
+    @extend %cta-img-before;
+  }
+}
+
 // mobile - llamados en mobile.scss
 @mixin cta--lg() {
   .cta-wrapper {

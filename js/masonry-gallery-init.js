@@ -59,4 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
     jsonUrl: 'json/bernstein-gallery.json',
     galleryName: 'galeria-bernstein'
   });
+
+  inicializarGaleria({
+    selector: '#galeria-vildosola',
+    jsonUrl: 'json/vildosola-gallery.json',
+    galleryName: 'galeria-vildosola'
+  });
 });
