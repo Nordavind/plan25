@@ -251,6 +251,15 @@
   }
 }
 
+.hero-int-slide-bernstein-3 {
+  @extend %hero-int-base;
+  background-image: url('../img/bernstein-slide-c.webp');
+
+  &::before {
+    @extend %hero-slide-before;
+  }
+}
+
 .hero-int-slide-vildosola-1 {
   @extend %hero-int-base;
   background-image: url('../img/vildosola-slide-b.webp');
@@ -263,6 +272,15 @@
 .hero-int-slide-vildosola-2 {
   @extend %hero-int-base;
   background-image: url('../img/vildosola-slide-a.webp');
+
+  &::before {
+    @extend %hero-slide-before;
+  }
+}
+
+.hero-int-slide-vildosola-3 {
+  @extend %hero-int-base;
+  background-image: url('../img/vildosola-slide-c.webp');
 
   &::before {
     @extend %hero-slide-before;

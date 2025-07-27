@@ -125,6 +125,7 @@
   min-height: 100%;
 }
 
+// Reina Bernstein
 .project-img-bernstein-1 {
   @extend %project-img-base;
   background-image: url('../img/project-img-bernstein-1.webp');
@@ -148,6 +149,32 @@
   background-image: url('../img/project-img-bernstein-4.webp');
   align-self: flex-start;
 }
+
+// Reina Vildosola
+.project-img-vildosola-1 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-vildosola-1.webp');
+  align-self: flex-start;
+}
+
+.project-img-vildosola-2 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-vildosola-2.webp');
+  align-self: flex-end;
+}
+
+.project-img-vildosola-3 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-vildosola-3.webp');
+  align-self: flex-end;
+}
+
+.project-img-vildosola-4 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-vildosola-4.webp');
+  align-self: flex-start;
+}
+
 
 // Text Content
 .two-col-project-content {
