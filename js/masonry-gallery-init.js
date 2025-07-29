@@ -65,4 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
     jsonUrl: 'json/vildosola-gallery.json',
     galleryName: 'galeria-vildosola'
   });
+
+    inicializarGaleria({
+    selector: '#galeria-castillo',
+    jsonUrl: 'json/castillo-gallery.json',
+    galleryName: 'galeria-castillo'
+  });
 });

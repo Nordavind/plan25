@@ -175,6 +175,30 @@
   align-self: flex-start;
 }
 
+// Reina Castillo
+.project-img-castillo-1 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-castillo-1.webp');
+  align-self: flex-start;
+}
+
+.project-img-castillo-2 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-castillo-2.webp');
+  align-self: flex-end;
+}
+
+.project-img-castillo-3 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-castillo-3.webp');
+  align-self: flex-end;
+}
+
+.project-img-castillo-4 {
+  @extend %project-img-base;
+  background-image: url('../img/project-img-castillo-4.webp');
+  align-self: flex-start;
+}
 
 // Text Content
 .two-col-project-content {

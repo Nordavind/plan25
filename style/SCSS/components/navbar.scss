@@ -99,7 +99,7 @@
   transition: all 0.3s ease-in-out;
 
   &.open {
-    height: 480px;
+    height: 540px;
     padding: 25px 0px 0px 0px;
   }
 }
@@ -151,22 +151,18 @@
 
   .nav-deploy {
     top: 81px;
+
+    &.open {
+      height: 470px;
+      padding: 20px;
+    }
   }
 
   .nav-list-mobile {
     align-items: center;
 
     a {
-      display: inline-block;
-      padding: 25px 25px 25px 25px;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-family: typo.$font-b;
-      font-size: 1rem;
-      line-height: 1rem;
-      font-weight: 200;
-      letter-spacing: 0.3px;
-      color: #fff;
+      padding: 20px 25px 20px 25px;
     }
 
     button {

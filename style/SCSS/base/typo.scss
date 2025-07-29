@@ -154,6 +154,10 @@ p {
     margin-bottom: 0px;
   }
 
+  &.color-a {
+    color: vars.$color-a;
+  }
+
   &.p-white {
     color: white;
     font-family: $font-a;
