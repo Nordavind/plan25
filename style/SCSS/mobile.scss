@@ -15,6 +15,7 @@
 @use './layouts/project-sec' as project-sec;
 @use './layouts/plant-sec' as plant-sec;
 @use './layouts/contact' as contact;
+@use './layouts/info-content' as info-content;
 @use './layouts/footer' as footer;
 
 
@@ -42,6 +43,7 @@
   @include project-sec.project-sec--lg(); // layouts/project-sec.scss
   @include plant-sec.plant-sec--lg(); // layouts/plant-sec.scss
   @include contact.contact--lg(); // layouts/contact.scss
+    @include info-content.info-content--lg(); // layouts/info-content.scss
   @include footer.footer--lg(); // layouts/footer.scss
 }
 
@@ -57,6 +59,7 @@
   @include about-us.about-us--md(); // layouts/about-us.scss
   @include project-sec.project-sec--md(); // layouts/project-sec.scss
   @include plant-sec.plant-sec--md(); // layouts/plant-sec.scss
+  @include info-content.info-content--md(); // layouts/info-content.scss
   @include contact.contact--md(); // layouts/contact.scss
 }
 
@@ -64,6 +67,7 @@
 @media screen and (max-width: 576px) {
   @include typo.typo--sm(); // base/typo.scss
   @include basic.basic--sm(); // base/basic.scss
+  @include navbar.navbar--sm(); // components/navbar.scss
   @include buttons.buttons--sm(); // components/buttons.scss
   @include top-bar.top-bar--sm(); // components/top-bar.scss
   @include pan-slider.pan-slider--sm(); // components/pan-slider.scss
@@ -75,5 +79,6 @@
   @include project-sec.project-sec--sm(); // layouts/project-sec.scss
   @include plant-sec.plant-sec--sm(); // layouts/plant-sec.scss
   @include contact.contact--sm(); // layouts/contact.scss
+  @include info-content.info-content--sm(); // layouts/info-content.scss
   @include footer.footer--sm(); // layouts/footer.scss
 }

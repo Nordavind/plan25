@@ -11,6 +11,12 @@
   box-shadow: 0px 4px 12px rgba(80, 80, 80, 0.15);
 }
 
+.navbar-bg-color {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 12px rgba(80, 80, 80, 0.15);
+}
+
 .navbar-wrapper {
   display: flex;
   flex-flow: row nowrap;
@@ -51,6 +57,10 @@
 
     border-top: 3px solid transparent;
     transition: border-color 0.3s ease-in-out;
+
+    &.color {
+      color: #434656;
+    }
 
     &:hover {
       border-top-color: vars.$color-a;
@@ -98,7 +108,16 @@
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 
+  &.color {
+    top: 146px;
+  }
+
   &.open {
+    height: 540px;
+    padding: 25px 0px 0px 0px;
+  }
+
+  &.open-c {
     height: 540px;
     padding: 25px 0px 0px 0px;
   }
@@ -152,7 +171,16 @@
   .nav-deploy {
     top: 81px;
 
+    &.color {
+      top: 126px;
+    }
+
     &.open {
+      height: 470px;
+      padding: 20px;
+    }
+
+    &.open-c {
       height: 470px;
       padding: 20px;
     }
@@ -167,6 +195,19 @@
 
     button {
       margin-left: 0px;
+    }
+  }
+}
+
+@mixin navbar--sm() {
+  .nav-deploy {
+
+    &.color {
+      top: 165px;
+    }
+
+    &.open-c {
+      height: 475px;
     }
   }
 }
